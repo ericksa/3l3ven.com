@@ -1,7 +1,7 @@
 export async function onRequestGet({ request, env }) {
   const url = new URL(request.url);
   const mode = url.searchParams.get('hub.mode');
-  const token = url.searchParams.get('hub.verify_token');
+  const token = ***'hub.verify_token');
   const challenge = url.searchParams.get('hub.challenge');
 
   if (mode === 'subscribe' && token === env.VERIFY_TOKEN) {
