@@ -1,17 +1,1 @@
-name = "dj-company-site"
-main = "functions/api"
-compatibility_flags = ["nodejs_compat"]
-# Cloudflare Pages configuration
-type = "javascript"
-account_id = "YOUR_CLOUDFLARE_ACCOUNT_ID"
-workers_dev = false
-
-[site]
-bucket = "./client/.next"
-entry-point = "functions"
-
-[build]
-command = "npm run build"
-
-[env.production]
-workers_dev = false
+name = '3l3ven'
