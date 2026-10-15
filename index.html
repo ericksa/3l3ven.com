@@ -175,19 +175,51 @@
 
         <section id="contact" style="max-width: 900px; margin: 80px auto; padding: 24px;">
             <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">Ready to Book?</h2>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
-                <div class="card">
-                    <h3>Consultation</h3>
-                    <p>Book a time to discuss your event details.</p>
-                    <!-- Replace the src with your actual Google Appointment Schedule link -->
-                    <iframe src="https://calendar.google.com/calendar/appointments/schedules/YOUR_SCHEDULE_LINK" style="border:0; width:100%; height:400px; margin-top:20px;" frameborder="0"></iframe>
-                </div>
-                <div class="card">
-                    <h3>Event Intake</h3>
-                    <p>Tell us about your event needs.</p>
-                    <!-- Replace the src with your actual Google Form link -->
-                    <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true" style="border:0; width:100%; height:400px; margin-top:20px;" frameborder="0"></iframe>
-                </div>
+            <div class="card" style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 32px; box-shadow: 0 8px 30px rgba(0,0,0,0.4);">
+                <form id="bookingForm" style="max-width: 600px; margin: 0 auto;">
+                    <div style="margin-bottom: 20px;">
+                        <label for="name" style="display: block; margin-bottom: 5px; font-weight: 600; color: var(--text);">Full Name</label>
+                        <input type="text" id="name" name="name" required style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text); font-size: 16px;">
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <label for="email" style="display: block; margin-bottom: 5px; font-weight: 600; color: var(--text);">Email Address</label>
+                        <input type="email" id="email" name="email" required style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text); font-size: 16px;">
+                    </div>
+                    
+                    <div style="margin-bottom: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div>
+                            <label for="date" style="display: block; margin-bottom: 5px; font-weight: 600; color: var(--text);">Date</label>
+                            <input type="date" id="date" name="date" required style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text); font-size: 16px;">
+                        </div>
+                        <div>
+                            <label for="time" style="display: block; margin-bottom: 5px; font-weight: 600; color: var(--text);">Time</label>
+                            <input type="time" id="time" name="time" required style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text); font-size: 16px;">
+                        </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <label for="service" style="display: block; margin-bottom: 5px; font-weight: 600; color: var(--text);">Service Type</label>
+                        <select id="service" name="service" required style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text); font-size: 16px;">
+                            <option value="">Select a service</option>
+                            <option value="DJ Entertainment">DJ Entertainment</option>
+                            <option value="Video Production">Video Production</option>
+                            <option value="Photo Booth">Photo Booth</option>
+                            <option value="Event Planning">Event Planning</option>
+                            <option value="Sound & Lighting">Sound & Lighting</option>
+                            <option value="Package Deal">Package Deal</option>
+                        </select>
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <label for="notes" style="display: block; margin-bottom: 5px; font-weight: 600; color: var(--text);">Additional Notes</label>
+                        <textarea id="notes" name="notes" rows="4" style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text); font-size: 16px;"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%;">Submit Booking Request</button>
+                </form>
+                
+                <div id="formResponse" style="margin-top: 20px; padding: 15px; border-radius: 8px; display: none;"></div>
             </div>
         </section>
 
@@ -210,5 +242,49 @@
     <footer>
         &copy; 2026 Eleven Entertainment (DBA 11) / Electric Life Productions. All rights reserved.
     </footer>
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            const responseDiv = document.getElementById('formResponse');
+            responseDiv.style.display = 'block';
+            responseDiv.style.backgroundColor = 'var(--card-bg)';
+            responseDiv.style.border = '1px solid var(--border)';
+            responseDiv.style.borderRadius = '8px';
+            responseDiv.style.padding = '15px';
+            responseDiv.textContent = 'Submitting...';
+            
+            try {
+                const response = await fetch('/api/book', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    responseDiv.style.backgroundColor = 'rgba(16, 185, 129, 0.2)';
+                    responseDiv.style.borderColor = 'var(--success)';
+                    responseDiv.textContent = 'Booking request submitted successfully! We will contact you shortly.';
+                    this.reset();
+                } else {
+                    responseDiv.style.backgroundColor = 'rgba(239, 68, 68, 0.2)';
+                    responseDiv.style.borderColor = '#ef4444';
+                    responseDiv.textContent = `Error: ${result.error || 'Failed to submit booking request'}`;
+                }
+            } catch (error) {
+                responseDiv.style.backgroundColor = 'rgba(239, 68, 68, 0.2)';
+                responseDiv.style.borderColor = '#ef4444';
+                responseDiv.textContent = `Error: ${error.message}`;
+            }
+        });
+    </script>
 </body>
 </html>
