@@ -1,0 +1,48 @@
+{
+  "name": "Adam Erickson",
+  "email": "erickson.adam.m@gmail.com",
+  "phone": "(231) 343-7221",
+  "location": "Whitehall, MI",
+  "clearance": "DoD Secret (Tier 3)",
+  "summary": "Accomplished Software Developer with 20+ years of experience designing and maintaining high-performance military and federal applications. Expert in Java and the Spring ecosystem, committed to security-first and test-first development. Experience with cloud and containerized environments (AWS GovCloud, Docker, Kubernetes).",
+  "skills": [
+    "Java (8-21)", "Spring Boot", "Spring MVC", "Hibernate", "Apache Camel", "JavaScript", "TypeScript", "HTML5", "CSS3", "Thymeleaf", "React",
+    "AWS GovCloud", "Docker", "Kubernetes", "OpenShift", "VMware ESXi",
+    "SQL", "Oracle", "PostgreSQL", "MySQL", "Redis", "Kafka Streams", "RocksDB",
+    "Git", "GitLab CI/CD", "Jenkins", "ArgoCD", "Tekton", "Maven", "Gradle", "SonarQube",
+    "JUnit", "Selenium", "TDD", "Root Cause Analysis", "Peer Code Reviews",
+    "Agile", "Scrum", "Kanban", "SDLC",
+    "RMF", "NIST 800-53", "DISA STIGs", "HIPAA"
+  ],
+  "experience": [
+    {
+      "title": "Senior Software Engineer (Contract)",
+      "company": "Trilogy Innovations LLC",
+      "dates": "Mar 2026 – Jun 2026",
+      "description": "Developed a central messaging system for military/law‑enforcement data exchange using Java 21, Spring Boot, and Kafka. Implemented security‑first architecture, API validation, and used ArgoCD/Kubernetes for deployment."
+    },
+    {
+      "title": "Lead Senior Java Software Engineer (Contract)",
+      "company": "North Stone LLC",
+      "dates": "Mar 2025 – Jul 2025",
+      "description": "Modernized Defense Health Agency systems, migrated to AWS GovCloud, built Spring Boot microservices, ensured 99.9% availability, applied test‑first development and DISA STIG compliance, created secure REST APIs handling >1M records."
+    },
+    {
+      "title": "Java Software Engineer (Contract)",
+      "company": "DDC Dine",
+      "dates": "Apr 2024 – Feb 2025",
+      "description": "Built high‑performance deduplication service with Kafka Streams and RocksDB, reduced latency by 35% for HL7‑to‑JSON pipelines for Navy Medical Online."
+    }
+    // Additional positions omitted for brevity
+  ],
+  "education": [
+    {"degree": "M.S. Information Systems Management", "school": "Ferris State University", "honors": "Magna Cum Laude"},
+    {"degree": "B.S. Computer Information Systems", "school": "Ferris State University", "honors": "Cum Laude"},
+    {"degree": "A.A.S. Programming", "school": "Muskegon Community College", "details": "C#/.NET curriculum"}
+  ],
+  "certifications": [
+    "Active DoD Secret Clearance (Tier 3)",
+    "NSA/DoD Information Assurance (CNSS 4011‑4016)",
+    "CompTIA Security+ CE (expected Sep 2026)"
+  ]
+}

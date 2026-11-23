@@ -1,0 +1,18 @@
+{
+  "name": "3l3ven-com",
+  "version": "1.0.0",
+  "description": "DJ & Entertainment Booking Website for Eleven Entertainment",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "dependencies": {
+    "vitepress": "^1.1.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -1,0 +1,61 @@
+ 1^SHOULDER 2 OR MORE VIEWS^ERICKSON,ADAM MICHAEL
+Group ID# 63114293
+_______________________________________________________________________________
+ERICKSON,ADAM MICHAE  374-86-9869    DOB-APR 05, 1977 M   
+Exm Date: AUG 02, 2024@10:07
+Req Phys: KAMP,DAVID H                   Pat Loc: GR/PACT TM 5 APN (Req'g Loc)
+                                         Img Loc: GR/X-RAY
+                                         Service: Unknown
+
+                               WYOMING HEALTH CARE CENTER
+                                          ,  
+                                          (616) 249-5300
+ 
+
+(Case 515-080224-1143 COMPLETE)SHOULDER 2 OR MORE VIEWS         (RAD  Detailed) CPT:73030
+     Proc Modifiers : RIGHT
+     Reason for Study: shoulder pain
+
+    Clinical History:
+
+    Report Status: Verified                   Date Reported: AUG 02, 2024
+                                              Date Verified: AUG 02, 2024
+    Verifier E-Sig:/ES/EWA LACKA
+
+    Report:
+       EXAMINATION: RIGHT SHOULDER 2 OR MORE VIEWS 
+       
+      DATE OF EXAM:  8/2/2024 11:00 AM 
+       
+      COMPARISON: none  
+       
+      HISTORY: 47 years old  Male with reason for exam stated shoulder 
+      pain 
+       
+       
+      FINDINGS: 
+       
+      There was no acute fractures, dislocations, significant 
+      posttraumatic deformities. Grossly preserved joint spaces. Normal 
+      coracoclavicular distance. Unremarkable visualized rib cage.  
+       
+      
+
+    Impression:
+       
+       
+      1. Normal osseous structures of the right shoulder.  
+       
+      DIAGNOSIS CODE: 1 
+       
+      Finalized by Ewa Lacka, MD 
+        On 8/2/2024 3:43 PM 
+
+    Primary Diagnostic Code: NORMAL
+
+Primary Interpreting Staff:
+  EWA LACKA, Staff Physician (Verifier)
+/EKL
+
+
+** END REPORT Aug 10, 2024 11:27:03 pm **

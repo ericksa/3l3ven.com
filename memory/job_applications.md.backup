@@ -1,0 +1,108 @@
+# Job Application Tracker — PA
+
+> Managed by **PA**. Last updated: 2026-08-13.
+> This is the single source of truth for Adam's job search. It is updated by:
+> - `PA Daily Job Discovery` (8 AM ET) — logs new matches and prepares apply-ready packages for roles >= 80% fit.
+> - `PA Daily Follow-Up Check` (10 AM ET) — drafts follow-ups for `Applied` roles whose follow-up date is due.
+> - `PA Weekly ClearanceJobs Hunter Batch` (Mondays 7 AM ET) — evaluates up to 20 ClearanceJobs listings.
+> Apply-ready packages are saved to `memory/apply_ready/YYYY-MM-DD_<company>_<role>.md`.
+
+## Active Pipeline Summary
+
+| Company | Role Title | Location | Clearance | Date Applied | Status | Source | Link/ID | Follow-Up Date | Notes |
+|---------|------------|----------|-----------|--------------|--------|--------|---------|----------------|-------|
+| | | | | | | | | | |
+
+## New Matches (Not Yet Applied)
+
+| Company | Role Title | Location | Clearance | Posting Date | Source | Link/ID | Fit Score | Why It Fits | Next Action |
+|---------|------------|----------|-----------|--------------|--------|---------|-----------|-------------|-------------|
+| Leidos | Senior Software Engineer | Remote | Secret | 2026-08-13 | ClearanceJobs | https://www.clearancejobs.com/jobs/9003528 ⚠️ EXPIRED/senior-software-engineer | 85% | Remote, Secret, no polygraph, SWE senior; Java/AWS stack aligns | **Expired** |
+| Praescient Analytics | Software Engineer, Senior (Secret Clearance) | Remote / Fairfax, VA | Secret | 2026-07-13 | ClearanceJobs | https://www.clearancejobs.com/jobs/9003029/software-engineer-senior-secret-clearance | 85% | Remote, Secret, 10+ yrs senior; strong Java/cloud fit | **Drafting — package ready** |
+| Stillwater Human Capital (Agile Defense) | Java Developer | Remote | Secret | 2026-07-13 | ClearanceJobs | https://www.clearancejobs.com/jobs/9011711 ⚠️ EXPIRED/java-developer | 80% | Remote, Secret, $140-150K, Java mid-senior | **Drafting — package ready** |
+| Conceras | Mostly Remote Secret Cleared Java Developer | Norfolk, VA (mostly remote) | Secret | 2026-07-23 | External ATS | https://conceras.applytojob.com/apply/UCtYR0wTe8/ | 80% | Secret, Java, mostly remote; requires Security+ CE (Adam's expected Sep 2026) | **Pending Manual** (external ATS) |
+| TEKsystems (Allegis) | Senior Software Engineer (Java/AWS) — 6-Week Project | Remote | Secret | 2026-08-06 | ClearanceJobs | https://www.clearancejobs.com/jobs/9067810/senior-software-engineer-javaaws-100-remote-6-week-project | 78% | Remote, Secret, Java/AWS; but only 6-week short-term contract | Stretch — flag short-term |
+| Concept Plus LLC | Sr. Developer | Remote | Secret | 2026-06-13 | ClearanceJobs | https://www.clearancejobs.com/jobs/8921304 ⚠️ EXPIRED/sr-developer | 75% | Remote, Secret, senior dev | Stretch |
+| CSCI | Java Developer | Remote | Secret | 2026-07-23 | ClearanceJobs | https://www.clearancejobs.com/jobs/8985422/java-developer | 75% | Remote, Secret, Java mid-level | Stretch |
+| Blue Rose Consulting Group | Senior Java Developer | Denver, CO | Secret | 2026-06-13 | ClearanceJobs | https://www.clearancejobs.com/jobs/8966288/senior-java-developer | 70% | Secret, Java senior; but on-site Denver (not remote) | Stretch — location mismatch |
+
+| Agile Defense, Inc. | Software Engineer (Java, OpenFGA) | Rosslyn, VA | Secret | 2026-08-12 | ClearanceJobs | https://www.clearancejobs.com/jobs/9062107/software-engineer-java-openfga | 80% | Secret, no polygraph, senior (10+ yrs), $165-175K, Java; on-site Rosslyn (not remote) | Stretch — location mismatch |
+| AVUM INC | Java Developer II | Remote | Secret | 2026-06 | ClearanceJobs | https://www.clearancejobs.com/jobs/8963294/java-developer-ii | 80% | Remote, Secret, no polygraph, mid (5+ yrs), $115-150K, Java | **Drafting — package ready** |
+| Trilogy Innovations Inc | Senior Software Developer - Backend | Remote | Secret | 2026-05 | ClearanceJobs | https://www.clearancejobs.com/jobs/8839670/senior-software-developer-backend | 80% | Remote, Secret, no polygraph, $140-144K, backend Java; CJIS-relevant employer (Adam holds CJIS) | **Drafting — package ready** |
+| Kforce Federal Solutions | Java Lead (Hybrid Remote) | Arlington, VA | Secret | 2026-07-30 | ClearanceJobs | https://www.clearancejobs.com/jobs/9045169/java-lead-hybrid-remote | 80% | Secret, no polygraph, $160-200K, Java lead; hybrid Arlington (not fully remote) | Stretch — location mismatch |
+| Information Gateways Inc | Java Developer | Remote | Secret | 2026-07 | ClearanceJobs | https://www.clearancejobs.com/jobs/8917234/java-developer | 78% | Remote, Secret, no polygraph, senior (10+ yrs), Java | **Drafting — package ready** |
+| TEKsystems (Allegis) | Senior Software Engineer (C#/Java) - Remote | Remote | Secret | 2026-07 | ClearanceJobs | https://www.clearancejobs.com/jobs/8953570/senior-software-engineer-cjava-remote | 75% | Remote, Secret, no polygraph, mid (5+ yrs), Java/C# | Stretch |
+| Optimal Solutions Inc | Software Engineer - Java | Remote | Secret | 2026-02 | ClearanceJobs | https://www.clearancejobs.com/jobs/8619296 ⚠️ EXPIRED/software-engineer-java | 75% | Remote, Secret, no polygraph, mid (5+ yrs), Java; older posting (6 mo) | Stretch — stale posting |
+
+## Follow-Up Log
+
+| Company | Role Title | Follow-Up Date | Method | Response | Notes |
+|---------|------------|----------------|--------|----------|-------|
+| | | | | | |
+
+## Status Legend
+
+- **New** — Identified but not yet reviewed.
+- **Reviewed** — JD compared to Adam’s profile; awaiting decision.
+- **Drafting** — Resume/cover letter in progress.
+- **Applied** — Submitted, awaiting response.
+- **Phone Screen** — Recruiter/HR call scheduled/completed.
+- **Interview** — Technical or panel interview scheduled/completed.
+- **Offer** — Offer received.
+- **Rejected** — Closed.
+- **Withdrawn** — Adam withdrew.
+
+## Resume Versions Used
+
+| Version | File | Date | Used For |
+|---------|------|------|----------|
+| | | | |
+| GDIT | Senior Software Developer | Remote | Secret | 2026-08-14 | GDIT Careers | https://www.gdit.com/careers/job/979431003/senior-software-developer/ | 82% | Remote, Secret, Java/SWE senior; Agile, SDLC; strong cloud+Java fit | **Drafting — package ready** |
+| Cornerstone Defense | Java Software Developer | Remote / CO Springs | Secret/TS | 2026-08-14 | Employer Direct | https://cornerstonedefense.com/job-listings/java-software-developer/ | 82% | Remote option, Secret/TS, $145-185K, Java; defense contractor; strong fit | **Drafting — package ready** |
+| GDIT | Java Senior Software Engineer | Falls Church, VA | Secret | 2026-08-14 | GDIT Careers | https://www.gd.com/careers/java-senior-software-engineer-falls-church-va-us-rq217290-gdit-opportunity | 78% | Secret, Java senior; but on-site Falls Church (not remote) | Stretch — location mismatch |
+| ec3 Federal Services | Sr Java Developer (Active Secret) | Remote (DC) | Secret | 2026-08-14 | iHireTechnology | https://www.ihiretechnology.com/jobs/view/531951990 | 82% | Remote, Secret, no polygraph, senior Java; strong stack fit | **New — review JD** |
+| NextGen Federal Systems | Software Developer (Secret Clearance) | Remote | Secret | 2026-08-14 | Lever (employer) | https://jobs.lever.co/nextgenfed/804a58e7-3f4d-45d8-9d15-799566dabad5 | 80% | Remote, Secret, FBI customer, software dev; Java/cloud fit | **New — review JD** |
+| ManTech | Java Developer | Remote (USA) | Secret | 2026-08-14 | SmartRemoteJobs | https://www.smartremotejobs.com/offer/java-developer-14567/ | 80% | Remote, Secret, Java; defense prime (ManTech) | **New — review JD** |
+| TASC Technical Services | Software Engineer (Java/React) | Baltimore, MD | Secret | 2026-08-14 | ClearanceJobs | https://www.clearancejobs.com/jobs/9032993/software-engineer-javareact | 70% | Secret, Java/React; but on-site Baltimore (not remote) | Stretch — location mismatch |
+| System One Holdings | Java React Developer | Arlington, VA | Secret | 2026-08-14 | ClearanceJobs | https://www.clearancejobs.com/jobs/8855984/java-react-developer | 70% | Secret, mid (5+ yrs), $115-151K, Java/React; on-site Arlington | Stretch — location mismatch |
+| Nationwide IT Services | Lead Java Engineer / Application Architect | Alexandria, VA | Secret | 2026-08-14 | External ATS | https://nationwideitservices.applytojob.com/apply/BLlPHfTcXj/Lead-Java-Engineer-Application-Architect | 75% | Secret, Java lead/architect; hybrid Alexandria (not fully remote) | Stretch — location mismatch |
+
+## New Matches — 2026-08-16 (Daily Discovery)
+
+| Company | Role Title | Location | Clearance | Posting Date | Source | Link/ID | Fit Score | Why It Fits | Next Action |
+|---------|------------|----------|-----------|--------------|--------|---------|-----------|-------------|-------------|
+| Rackner | Software Engineer, Sr. (DoD Secret) | Remote | Secret | 2026-08-12 | Worksynergy/Greenhouse | https://job-boards.greenhouse.io/rackner/jobs/4717768005 | 82% | Remote, Secret, no polygraph, 5+ yrs, Python/Java/C#, cloud-native consultancy; strong stack fit | **New — review JD** |
+| ClearBridge Technology Group | Secret Cleared Full Stack Software Engineer | Remote (DC) | Secret | 2026-08-16 | Dice | https://www.dice.com/job-detail/055e0cc9-99a4-4390-9ba2-59143b41e06c | 80% | Remote, Secret, $135-170K, full-stack; strong fit | **New — review JD** |
+| LMI Government Consulting | Full Stack Software Engineer (Clearance Required) | Remote | Secret | 2026-07-18 | LMI Careers (iCIMS) | https://careers-lmi.icims.com/jobs/14295/full-stack-software-engineer/job | 78% | Remote, Secret, gov consulting; full-stack | **New — review JD** |
+| DecisionPoint Corporation | Full Stack Developer (USTRANSCOM) | Remote | Secret | 2026-07-20 | DecisionPoint iCIMS | https://careers-decisionpointcorp.icims.com/jobs/3487/full-stack-developer/job | 75% | Remote, Secret, USTRANSCOM Global Freight Mgmt; full-stack | **New — review JD** |
+| Worksynergy | Secret-Cleared Java Developer | Mostly Remote (Norfolk 1d/mo) | Secret | 2026-08-11 | Worksynergy | https://worksynergy.10001mb.com/remote-jobs/mostly-remote-secret-cleared-java-developer-3 | 78% | Mostly remote, Secret, Java; requires Security+ CE (Adam's expected Sep 2026) | **New — review JD** |
+| CACI International | Backend Developer (Java, C/C++) | Norfolk, VA | Secret | 2026-08-15 | USA.jobs | https://www.usa.jobs/jobs/571878173-backend-developer-java-c-c++ | 70% | Secret, Java; but on-site Norfolk (not remote) | Stretch — location mismatch |
+| Insight Global | Secret Software Developer | Aberdeen, MD | Secret | 2026-08-14 | ClearanceJobs | https://www.clearancejobs.com/jobs/8788103/secret-software-developer | 70% | Secret, $130-150K; but on-site Aberdeen (not remote) | Stretch — location mismatch |
+
+## New Matches — 2026-08-17 (Weekly ClearanceJobs Hunter Batch)
+
+| Company | Role Title | Location | Clearance | Posting Date | Source | Link/ID | Fit Score | Why It Fits | Next Action |
+|---------|------------|----------|-----------|--------------|--------|---------|-----------|-------------|-------------|
+| IPT Associates (IPTA) | Software Engineer | Remote / Austin, TX | Secret | 2026-08-13 | ClearanceJobs | https://www.clearancejobs.com/jobs/9039796/software-engineer | 78% | Remote, Secret, no polygraph, mid (5+ yrs), SWE; Java/cloud fit | **New — review JD** |
+| CSCI Consulting | Full Stack Java Developer | Indianapolis, IN | Secret | 2026-08-11 | ClearanceJobs | https://www.clearancejobs.com/jobs/9031675/full-stack-java-developer | 75% | Secret, Java full-stack, mid; but on-site Indianapolis (not remote) | Stretch — location mismatch |
+| Peraton | Java Software Engineer | TBD (telework flexible, must be local) | Secret | 2026-08 | Peraton Careers | https://www.careers.peraton.com/jobs/java-software-engineer-undefined-undefined-168023-jobs--information-technology-- | 75% | Secret, Java SWE; telework flexible but location unspecified | Stretch — location TBD |
+| GDIT | Software Engineer (Active Secret) | El Segundo, CA | Secret | 2026-08 | GDIT Careers | https://www.gd.com/careers/software-engineer-active-secret-clearance-el-segundo-ca-us-rq214959-gdit-opportunity | 70% | Secret, SWE; but on-site El Segundo (not remote) | Stretch — location mismatch |
+
+## Rejected — Clearance > Secret / Polygraph (2026-08-17 Batch)
+
+| Company | Role Title | Location | Clearance | Link/ID | Reason |
+|---------|------------|----------|-----------|---------|--------|
+| SHINE Systems | Cleared Sr. Java Developer | Remote / Annapolis Jct / DC / Reston | TS/SCI + Polygraph | https://www.clearancejobs.com/jobs/9049479/cleared-sr-java-developer | Clearance > Secret + polygraph |
+| Zachary Piper Solutions | Hybrid Remote Sr. Java Developer (TS/SCI) | Annapolis, MD | TS/SCI + Polygraph | https://www.clearancejobs.com/jobs/9045017/hybrid-remote-sr-java-developer-tssci | Clearance > Secret + polygraph |
+| SYSTOLIC | Software Engineer [$214k/yr+] | Remote / Annapolis Jct | TS/SCI-FS Poly | https://www.clearancejobs.com/jobs/9034482/software-engineer-214kyr-tssci-fs-poly | Clearance > Secret + full-scope poly |
+| GCI | Full Stack Java Developer SME (TS/SCI w/ Poly) | Dulles, VA | TS/SCI + Polygraph | https://www.clearancejobs.com/jobs/9086947/full-stack-java-developer-sme-tssci-with-poly-required | Clearance > Secret + polygraph |
+| Red Arch Solutions | Senior Software Engineer (Telework) | Remote / Annapolis Jct | TS/SCI + Polygraph | https://www.clearancejobs.com/jobs/8989745/senior-software-engineer-telework-available | Clearance > Secret + polygraph |
+| Cohere Technology Group | Java Developer | Chantilly, VA | TS/SCI-FS Poly | https://www.clearancejobs.com/jobs/9049602/java-developer | Clearance > Secret + full-scope poly |
+| SYSTOLIC | Junior Full-Stack Java Developer [$225k/yr+] | Herndon, VA | TS/SCI-FS Poly | https://www.clearancejobs.com/jobs/9066107/junior-full-stack-java-developer-225kyr-tssci-fs-poly | Clearance > Secret + full-scope poly |
+| Zachary Piper Solutions | App Developer | Herndon, VA | Top Secret | https://www.clearancejobs.com/jobs/9087436/app-developer | Clearance > Secret |
+
+## New Matches — 2026-08-17 (Daily Discovery)
+
+| Company | Role Title | Location | Clearance | Posting Date | Source | Link/ID | Fit Score | Why It Fits | Next Action |
+|---------|------------|----------|-----------|--------------|--------|---------|-----------|-------------|-------------|
+| Rollout Systems | Sr. Java Software Developer | 100% Remote (USA) | Secret | 2026-07-23 | LinkedIn / employer | https://www.linkedin.com/posts/rollout-systems-llc_java-javadev-oracle-activity-7443326511320862721-oW6H | 82% | 100% remote, Active Secret (no exceptions), senior Java + Oracle; strong stack fit | **New — review JD** |

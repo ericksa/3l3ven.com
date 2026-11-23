@@ -1,0 +1,111 @@
+{
+  "personal_info": {
+    "full_name": "Adam Erickson",
+    "email": "erickson.adam.m@gmail.com",
+    "phone": "(231) 343-7221",
+    "location": {
+      "city": "Whitehall",
+      "state": "MI",
+      "country": "USA",
+      "full_address": "Whitehall, MI"
+    },
+    "linkedin_url": "linkedin.com/in/ericksonadamm",
+    "github_url": "github.com/ericksa",
+    "veteran_status": "Service-Connected Disabled Veteran",
+    "clearance": "Active DoD Secret Clearance (Tier 3)"
+  },
+  "professional_summary": "Accomplished Software Developer with 20+ years of experience designing and maintaining high-performance military and federal applications. Expert in Java and the Spring ecosystem, with a deep commitment to security-first and test-first development. Proven track record of delivering secure, scalable software in cloud and containerized environments (AWS GovCloud, Docker, Kubernetes). Adept at systems analysis, root-cause troubleshooting, and collaborating across cross-functional teams to modernize critical government infrastructure.",
+  "technical_skills": {
+    "languages_frameworks": ["Java (8-21)", "Spring Boot", "Spring MVC", "Hibernate", "Apache Camel", "JavaScript", "TypeScript", "HTML5", "CSS3", "Thymeleaf", "React"],
+    "cloud_containers": ["AWS GovCloud", "Docker", "Kubernetes", "OpenShift", "VMware ESXi"],
+    "data_management": ["SQL", "Oracle", "PostgreSQL", "MySQL", "Redis", "Kafka Streams", "RocksDB"],
+    "devsecops_tooling": ["Git", "GitLab CI/CD", "Jenkins", "ArgoCD", "Tekton", "Maven", "Gradle", "SonarQube"],
+    "testing_quality": ["JUnit", "Selenium", "TDD", "Root Cause Analysis", "Peer Code Reviews"],
+    "methodologies": ["Agile", "Scrum", "Kanban", "Systems Analysis", "SDLC"],
+    "compliance": ["RMF", "NIST 800-53", "DISA STIGs", "HIPAA"]
+  },
+  "work_experience": [
+    {
+      "job_title": "Senior Software Engineer (Contract)",
+      "company_name": "Trilogy Innovations LLC",
+      "location": "Remote",
+      "start_date": "Mar 2026",
+      "end_date": "Jun 2026",
+      "bullets": [
+        "Developed a central messaging system for military/law-enforcement data exchange utilizing Java 21, Spring Boot, and Kafka, ensuring low-latency and high-availability.",
+        "Applied a security-first approach to the architecture, implementing robust validation layers and secure API endpoints.",
+        "Collaborated with cross-functional teams in an Agile environment to translate complex mission requirements into technical design and implementable code.",
+        "Leveraged ArgoCD and Kubernetes for seamless deployment and maintenance of containerized services."
+      ]
+    },
+    {
+      "job_title": "Lead Senior Java Software Engineer (Contract)",
+      "company_name": "North Stone LLC",
+      "location": "Remote",
+      "start_date": "Mar 2025",
+      "end_date": "Jul 2025",
+      "bullets": [
+        "Led the modernization of legacy Defense Health Agency systems, migrating to AWS GovCloud using Spring Boot microservices.",
+        "Conducted deep systems analysis and troubleshooting to resolve legacy bottlenecks, improving system availability to 99.9%.",
+        "Implemented a test-first development strategy using JUnit and automated security scanning to ensure 100% DISA STIG compliance.",
+        "Designed and implemented secure RESTful APIs to handle processing for over 1 million personnel records."
+      ]
+    },
+    {
+      "job_title": "Java Software Engineer (Contract)",
+      "company_name": "DDC Dine",
+      "location": "Remote",
+      "start_date": "Apr 2024",
+      "end_date": "Feb 2025",
+      "bullets": [
+        "Developed a high-performance deduplication service using Kafka Streams and RocksDB, reducing reliance on external databases and improving system throughput.",
+        "Engineered HL7-to-JSON pipelines for Navy Medical Online, optimizing data flow and reducing latency by 35%.",
+        "Participated in full-lifecycle development, from initial design and coding to system testing and production release."
+      ]
+    },
+    {
+      "job_title": "Software Engineer",
+      "company_name": "Spinsys Dine LLC",
+      "location": "Remote",
+      "start_date": "Dec 2023",
+      "end_date": "Mar 2024",
+      "bullets": [
+        "Designed and implemented automated ingestion services for Amazon Redshift, increasing throughput by 60% for a Federal Hearing Center of Excellence.",
+        "Worked within an Agile framework to iterate on features based on direct user and stakeholder feedback."
+      ]
+    },
+    {
+      "job_title": "Software Engineer (Contract)",
+      "company_name": "SpinSys LLC",
+      "location": "Remote",
+      "start_date": "Jul 2021",
+      "end_date": "Nov 2023",
+      "bullets": [
+        "Migrated legacy DoD applications to a containerized microservices architecture on AWS GovCloud.",
+        "Troubleshot and debugged complex software defects in production, performing root cause analysis to implement permanent fixes.",
+        "Maintained strict adherence to RMF and security-first coding standards."
+      ]
+    },
+    {
+      "job_title": "Java Software Engineer",
+      "company_name": "Gordon Food Service (GFS)",
+      "location": "Wyoming, MI",
+      "start_date": "Mar 2015",
+      "end_date": "Dec 2016",
+      "bullets": [
+        "Enhanced a mission-critical Warehouse Management System using Java and Oracle, implementing automated testing with JUnit and Selenium.",
+        "Developed and maintained web-based interfaces using Java frameworks and SQL."
+      ]
+    }
+  ],
+  "education": [
+    {"degree": "M.S. Information Systems Management", "school": "Ferris State University", "honors": "Magna Cum Laude"},
+    {"degree": "B.S. Computer Information Systems", "school": "Ferris State University", "honors": "Cum Laude"},
+    {"degree": "A.A.S. Programming", "school": "Muskegon Community College", "notes": "C#/.NET curriculum"}
+  ],
+  "certifications": [
+    "Active DoD Secret Clearance (Tier 3)",
+    "NSA/DoD Information Assurance (CNSS 4011-4016)",
+    "CompTIA Security+ CE (DoD 8570 Aligned) – Expected September 2026"
+  ]
+}

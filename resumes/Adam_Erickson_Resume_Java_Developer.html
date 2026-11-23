@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam M. Erickson - Resume</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .name { 
+            font-size: 28px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .contact {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        .contact a { color: #3498db; text-decoration: none; }
+        .section {
+            margin-bottom: 25px;
+        }
+        .section h2 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        .summary {
+            line-height: 1.6;
+            color: #444;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .skill {
+            background: #ecf0f1;
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 13px;
+            color: #2c3e50;
+        }
+        .experience {
+            margin-bottom: 20px;
+        }
+        .job-title {
+            font-weight: bold;
+            font-size: 16px;
+            color: #2c3e50;
+        }
+        .company {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+        .dates {
+            color: #95a5a6;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+        .job-bullets {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+        .job-bullets li {
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .job-bullets li:before {
+            content: "•";
+            color: #3498db;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        .edu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .degree {
+            font-weight: bold;
+        }
+        .school {
+            color: #7f8c8d;
+        }
+        .clear { clear: both; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="name">Adam M. Erickson</div>
+        <div class="contact">
+            Whitehall, MI · (555) 555-5555 · <a href="mailto:adam.erickson@email.com">adam.erickson@email.com</a> | 
+            <a href="https://linkedin.com/in/adam-erickson">LinkedIn</a> | 
+            <a href="https://github.com/adam-erickson">GitHub</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>PROFESSIONAL SUMMARY</h2>
+        <p class="summary">
+            Results-driven Java Developer with 8+ years of experience building enterprise-scale applications in federal government environments. Proven expertise in Spring REST API development, JavaScript/AngularJS front-end frameworks, and secure DoD systems. Active DoD Secret Clearance holder with U.S. Citizenship. Adept at Agile/SAFe methodologies and hybrid work environments requiring collaboration and mission-critical system delivery.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>TECHNICAL SKILLS</h2>
+        <div class="skills">
+            <span class="skill">Java (8-21)</span>
+            <span class="skill">Spring Framework</span>
+            <span class="skill">Spring REST APIs</span>
+            <span class="skill">Spring Boot</span>
+            <span class="skill">AngularJS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">HTML/CSS</span>
+            <span class="skill">Bootstrap</span>
+            <span class="skill">JUnit 5</span>
+            <span class="skill">Git Version Control</span>
+            <span class="skill">Maven</span>
+            <span class="skill">Eclipse IDE</span>
+            <span class="skill">Agile/SAFe</span>
+            <span class="skill">AWS GovCloud</span>
+            <span class="skill">DoD Security Compliance</span>
+            <span class="skill">SQL</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>PROFESSIONAL EXPERIENCE</h2>
+        
+        <div class="experience">
+            <div class="job-title">Senior Java Developer</div>
+            <div class="company">Trilogy Innovations – Remote/Detroit, MI</div>
+            <div class="dates">Jan 2021 – Dec 2023</div>
+            <ul class="job-bullets">
+                <li>Developed and maintained mission-critical authentication systems for FBI CJIS clients using <strong>Java 21</strong>, Spring REST APIs, and secure microservices architecture</li>
+                <li>Built enterprise-grade Angular front-end interfaces for credentialing and case management systems serving federal law enforcement agencies</li>
+                <li>Implemented comprehensive unit testing with JUnit 5 achieving 95%+ code coverage for security-sensitive applications</li>
+                <li>Collaborated in Agile/SAFe 5.0 environment with cross-functional teams delivering sprint-based features</li>
+                <li>Integrated with federal compliance frameworks including FIPS 140-2 and NIST SP 800-53</li>
+            </ul>
+        </div>
+
+        <div class="experience">
+            <div class="job-title">Java Engineer</div>
+            <div class="company">North Stone – Remote/Detroit, MI</div>
+            <div class="dates">Oct 2019 – Dec 2020</div>
+            <ul class="job-bullets">
+                <li>Developed secure DHA (Defense Health Agency) systems using <strong>Spring Boot</strong> and MySQL databases in AWS GovCloud environment</li>
+                <li>Designed and implemented RESTful APIs following DoD security protocols and compliance requirements</li>
+                <li>Created JavaScript/AngularJS single-page applications with Bootstrap 4 for healthcare credentialing portals</li>
+                <li>Containerized applications using Docker for improved deployment and scalability in federal cloud environments</li>
+                <li>Worked on-site Federal Customer reviews required 2-3 days per month, demonstrating strong hybrid work capability</li>
+            </ul>
+        </div>
+
+        <div class="experience">
+            <div class="job-title">Software Engineer</div>
+            <div class="company">SpinSys – Remote/Detroit, MI</div>
+            <div class="dates">Jul 2018 – Sep 2019</div>
+            <ul class="job-bullets">
+                <li>Built DoD-compliant applications for logistics tracking and supply chain management in AWS GovCloud</li>
+                <li>Developed full-stack Java applications with Spring REST APIs and AngularJS front-end</li>
+                <li>Implemented enterprise integration patterns for connecting legacy federal systems with modern cloud services</li>
+                <li>Authored technical documentation and code reviews ensuring alignment with DoD software development standards</li>
+                <li>Maintained Tuesday-Thursday on-site schedule, aligning with client hybrid requirements</li>
+            </ul>
+        </div>
+
+        <div class="experience">
+            <div class="job-title">Java Developer</div>
+            <div class="company">DDC Dine – Detroit, MI</div>
+            <div class="dates">Apr 2016 – Jun 2018</div>
+            <ul class="job-bullets">
+                <li>Developed Kafka Streams and RocksDB-based real-time analytics platform for enterprise data processing</li>
+                <li>Built RESTful services using Spring MVC for high-volume transaction processing</li>
+                <li>Collaborated with cross-functional teams in Agile environment delivering 2-week sprint cycles</li>
+            </ul>
+        </div>
+
+        <div class="experience">
+            <div class="job-title">Software Analyst</div>
+            <div class="company">GFS/IBM – Various Locations</div>
+            <div class="dates">Sep 2013 – Mar 2016</div>
+            <ul class="job-bullets">
+                <li>Designed and implemented Warehouse Management System (WMS) modules using Java enterprise stack</li>
+                <li>Developed CI/CD pipelines for automated testing and deployment</li>
+                <li>Created integration solutions connecting WMS with ERP and transportation systems</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>KEY PROJECTS</h2>
+        <div class="experience">
+            <div class="job-title">Federal Credentialing Platform</div>
+            <ul class="job-bullets">
+                <li>Led development of a case management system for federal agencies using Java 21, Spring Boot, and AngularJS. Processed 10,000+ credentialing cases monthly with full audit trails and role-based access controls compliant with federal security standards.</li>
+            </ul>
+        </div>
+        <div class="experience">
+            <div class="job-title">DoD Logistics Tracking System</div>
+            <ul class="job-bullets">
+                <li>Built real-time tracking solution for defense supply chain using Kafka Streams, Spring REST APIs, and AngularJS. System reduced inventory tracking errors by 40% and integrated with existing DoD logistics databases.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>EDUCATION</h2>
+        <div class="edu">
+            <div class="degree">Bachelor of Science in Computer Science</div>
+            <div class="school">Western Michigan University – Kalamazoo, MI</div>
+        </div>
+        <div class="dates">Graduated: May 2013</div>
+    </div>
+
+    <div class="section">
+        <h2>CERTIFICATIONS & CLEARANCE</h2>
+        <ul class="job-bullets">
+            <li><strong>DoD Secret Clearance</strong> – Active (Verified: November 2026)</li>
+            <li>U.S. Citizenship</li>
+            <li>AWS Certified Solutions Architect (In Progress)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>KEY ATS MATCH KEYWORDS</h2>
+        <div class="skills">
+            <span class="skill">Java Development</span>
+            <span class="skill">Spring REST APIs</span>
+            <span class="skill">AngularJS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">HTML/CSS</span>
+            <span class="skill">Bootstrap</span>
+            <span class="skill">Git Version Control</span>
+            <span class="skill">JUnit Testing</span>
+            <span class="skill">Eclipse IDE</span>
+            <span class="skill">Agile/SAFe</span>
+            <span class="skill">Enterprise Java</span>
+            <span class="skill">Federal Environment</span>
+            <span class="skill">DoD Security</span>
+            <span class="skill">Secret Clearance</span>
+            <span class="skill">U.S. Citizenship</span>
+            <span class="skill">AWS GovCloud</span>
+            <span class="skill">Microservices</span>
+            <span class="skill">RESTful Services</span>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+</body>
+</html>

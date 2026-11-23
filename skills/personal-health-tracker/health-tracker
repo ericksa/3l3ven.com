@@ -1,0 +1,331 @@
+#!/usr/bin/env python3
+"""
+Personal Health Tracker - Comprehensive health management system
+"""
+import json
+import os
+import argparse
+from datetime import datetime
+from pathlib import Path
+
+# Health data directory
+HEALTH_DIR = Path.home() / "Documents" / "Health"
+HEALTH_DIR.mkdir(parents=True, exist_ok=True)
+
+# File paths
+DATA_FILE = HEALTH_DIR / "health_data.json"
+APPOINTMENTS_FILE = HEALTH_DIR / "appointments.md"
+METRICS_FILE = HEALTH_DIR / "metrics.md"
+MEDICATIONS_FILE = HEALTH_DIR / "medications.md"
+INSURANCE_FILE = HEALTH_DIR / "insurance.md"
+CONTACTS_FILE = HEALTH_DIR / "emergency_contacts.md"
+
+def load_data():
+    if DATA_FILE.exists():
+        with open(DATA_FILE, 'r') as f:
+            return json.load(f)
+    return {
+        "appointments": [],
+        "metrics": [],
+        "medications": [],
+        "insurance": [],
+        "contacts": []
+    }
+
+def save_data(data):
+    with open(DATA_FILE, 'w') as f:
+        json.dump(data, f, indent=2, default=str)
+
+def init_health_data():
+    """Initialize health data files"""
+    data = load_data()
+    save_data(data)
+    
+    # Create/update markdown files
+    create_appointment_header()
+    create_metrics_header()
+    create_medications_header()
+    create_insurance_header()
+    create_contacts_header()
+    print("✓ Health tracking system initialized")
+
+def create_appointment_header():
+    header = """# Health Appointments
+
+Records of doctor, therapy, mental health, and emergency appointments.
+
+## Upcoming (Next 30 days)
+
+"""
+    if not APPOINTMENTS_FILE.exists():
+        with open(APPOINTMENTS_FILE, 'w') as f:
+            f.write(header)
+
+def create_metrics_header():
+    header = """# Health Metrics & Readings
+
+Track health issues with readings over time.
+
+"""
+    if not METRICS_FILE.exists():
+        with open(METRICS_FILE, 'w') as f:
+            f.write(header)
+
+def create_medications_header():
+    header = """# Medications
+
+Medication tracking with dosages, schedules, and refill dates.
+
+"""
+    if not MEDICATIONS_FILE.exists():
+        with open(MEDICATIONS_FILE, 'w') as f:
+            f.write(header)
+
+def create_insurance_header():
+    header = """# Health Insurance Information
+
+## Policies
+
+"""
+    if not INSURANCE_FILE.exists():
+        with open(INSURANCE_FILE, 'w') as f:
+            f.write(header)
+
+def create_contacts_header():
+    header = """# Emergency Contacts
+
+## Priority Contacts
+
+| Name | Phone | Relationship | Priority |
+|------|-------|--------------|----------|
+"""
+    if not CONTACTS_FILE.exists():
+        with open(CONTACTS_FILE, 'w') as f:
+            f.write(header)
+
+def add_appointment(data, args):
+    """Add a new appointment"""
+    appt = {
+        "type": args.type,
+        "date": args.date,
+        "time": args.time,
+        "location": args.location,
+        "notes": args.notes,
+        "created": datetime.now().isoformat()
+    }
+    data["appointments"].append(appt)
+    save_data(data)
+    
+    # Update markdown file
+    with open(APPOINTMENTS_FILE, 'a') as f:
+        f.write(f"\n### {appt['date']} @ {appt['time']}\n")
+        f.write(f"**Type**: {appt['type']}\n")
+        f.write(f"**Location**: {appt['location']}\n")
+        if appt['notes']:
+            f.write(f"**Notes**: {appt['notes']}\n")
+    
+    print(f"✓ Appointment added: {appt['type']} on {appt['date']} at {appt['time']}")
+
+def add_metric(data, args):
+    """Add a health metric reading"""
+    metric = {
+        "condition": args.condition,
+        "reading": args.reading,
+        "value": args.value,
+        "unit": args.unit,
+        "date": args.date,
+        "created": datetime.now().isoformat()
+    }
+    data["metrics"].append(metric)
+    save_data(data)
+    
+    # Update markdown file
+    with open(METRICS_FILE, 'a') as f:
+        f.write(f"\n#### {metric['date']} - {metric['condition']}\n")
+        f.write(f"- Reading: {metric['reading']}\n")
+        f.write(f"- Value: {metric['value']} {metric['unit']}\n")
+    
+    print(f"✓ Metric added for {metric['condition']}")
+
+def add_medication(data, args):
+    """Add a new medication"""
+    med = {
+        "name": args.name,
+        "dosage": args.dosage,
+        "frequency": args.frequency,
+        "start_date": args.start_date,
+        "refill_reminder": args.refill_reminder if hasattr(args, 'refill_reminder') else None,
+        "created": datetime.now().isoformat()
+    }
+    data["medications"].append(med)
+    save_data(data)
+    
+    # Update markdown file
+    with open(MEDICATIONS_FILE, 'a') as f:
+        f.write(f"\n### {med['name']}\n")
+        f.write(f"- Dosage: {med['dosage']}\n")
+        f.write(f"- Frequency: {med['frequency']}\n")
+        f.write(f"- Start Date: {med['start_date']}\n")
+    
+    print(f"✓ Medication added: {med['name']}")
+
+def add_insurance(data, args):
+    """Add insurance information"""
+    ins = {
+        "provider": args.provider,
+        "policy_number": args.policy_number,
+        "effective_date": args.effective_date,
+        "group_number": args.group_number if hasattr(args, 'group_number') else None,
+        "created": datetime.now().isoformat()
+    }
+    data["insurance"].append(ins)
+    save_data(data)
+    
+    # Update markdown file
+    with open(INSURANCE_FILE, 'a') as f:
+        f.write(f"\n#### {ins['provider']}\n")
+        f.write(f"- Policy Number: {ins['policy_number']}\n")
+        if ins.get('group_number'):
+            f.write(f"- Group Number: {ins['group_number']}\n")
+        f.write(f"- Effective Date: {ins['effective_date']}\n")
+    
+    print(f"✓ Insurance added: {ins['provider']}")
+
+def add_contact(data, args):
+    """Add emergency contact"""
+    contact = {
+        "name": args.name,
+        "phone": args.phone,
+        "relationship": args.relationship,
+        "priority": args.priority,
+        "created": datetime.now().isoformat()
+    }
+    data["contacts"].append(contact)
+    save_data(data)
+    
+    # Update markdown file
+    with open(CONTACTS_FILE, 'a') as f:
+        f.write(f"| {contact['name']} | {contact['phone']} | {contact['relationship']} | {contact['priority']} |\n")
+    
+    print(f"✓ Emergency contact added: {contact['name']}")
+
+def list_appointments(data, args):
+    """List appointments"""
+    appts = data.get("appointments", [])
+    if not appts:
+        print("No appointments recorded.")
+        return
+    
+    for a in sorted(appts, key=lambda x: x.get('date', '')):
+        print(f"• {a['date']} @ {a.get('time', 'TBA')} - {a['type']} @ {a['location']}")
+        if a.get('notes'):
+            print(f"  {a['notes']}")
+
+def list_medications(data, args):
+    """List medications"""
+    meds = data.get("medications", [])
+    if not meds:
+        print("No medications recorded.")
+        return
+    
+    for m in meds:
+        print(f"• {m['name']} - {m['dosage']} {m['frequency']}")
+
+def list_metrics(data, args):
+    """List metrics for a condition"""
+    condition = args.condition if args.condition else None
+    metrics = data.get("metrics", [])
+    
+    if condition:
+        metrics = [m for m in metrics if m.get('condition') == condition]
+    
+    if not metrics:
+        print("No metrics recorded.")
+        return
+    
+    for m in sorted(metrics, key=lambda x: x.get('date', '')):
+        print(f"• {m['date']} - {m['condition']}: {m['reading']} ({m['value']} {m['unit']})")
+
+def sync_calendar():
+    """Sync appointments with Google Calendar via gog"""
+    print("Syncing appointments with Google Calendar...")
+    os.system("gog --client personal calendar events list --max 50 2>&1 | head -20")
+    print("Calendar sync complete.")
+
+def main():
+    parser = argparse.ArgumentParser(description='Personal Health Tracker')
+    parser.add_argument('--init', action='store_true', help='Initialize health tracking system')
+    
+    subparsers = parser.add_subparsers(dest='command', help='Commands')
+    
+    # Add appointment
+    appt_parser = subparsers.add_parser('add-appointment', help='Add appointment')
+    appt_parser.add_argument('--type', required=True, help='Appointment type')
+    appt_parser.add_argument('--date', required=True, help='Date (YYYY-MM-DD)')
+    appt_parser.add_argument('--time', required=True, help='Time')
+    appt_parser.add_argument('--location', required=True, help='Location')
+    appt_parser.add_argument('--notes', help='Additional notes')
+    
+    # Add metric
+    metric_parser = subparsers.add_parser('add-metric', help='Add health metric')
+    metric_parser.add_argument('--condition', required=True, help='Health condition')
+    metric_parser.add_argument('--reading', required=True, help='Reading type')
+    metric_parser.add_argument('--value', required=True, help='Value')
+    metric_parser.add_argument('--unit', required=True, help='Unit')
+    metric_parser.add_argument('--date', default=datetime.now().strftime('%Y-%m-%d'), help='Date')
+    
+    # Add medication
+    med_parser = subparsers.add_parser('add-medication', help='Add medication')
+    med_parser.add_argument('--name', required=True, help='Medication name')
+    med_parser.add_argument('--dosage', required=True, help='Dosage')
+    med_parser.add_argument('--frequency', required=True, help='Frequency')
+    med_parser.add_argument('--start-date', required=True, help='Start date')
+    med_parser.add_argument('--refill-reminder', help='Refill reminder date')
+    
+    # Add insurance
+    ins_parser = subparsers.add_parser('add-insurance', help='Add insurance')
+    ins_parser.add_argument('--provider', required=True, help='Insurance provider')
+    ins_parser.add_argument('--policy-number', required=True, help='Policy number')
+    ins_parser.add_argument('--effective-date', required=True, help='Effective date')
+    ins_parser.add_argument('--group-number', help='Group number')
+    
+    # Add contact
+    contact_parser = subparsers.add_parser('add-contact', help='Add emergency contact')
+    contact_parser.add_argument('--name', required=True, help='Contact name')
+    contact_parser.add_argument('--phone', required=True, help='Phone number')
+    contact_parser.add_argument('--relationship', required=True, help='Relationship')
+    contact_parser.add_argument('--priority', type=int, default=3, help='Priority (1-5)')
+    
+    # List commands
+    subparsers.add_parser('list-appointments', help='List appointments')
+    list_med_parser = subparsers.add_parser('list-medications', help='List medications')
+    list_metric_parser = subparsers.add_parser('list-metrics', help='List metrics')
+    list_metric_parser.add_argument('--condition', help='Filter by condition')
+    subparsers.add_parser('sync-calendar', help='Sync with Google Calendar')
+    
+    args = parser.parse_args()
+    data = load_data()
+    
+    if args.init:
+        init_health_data()
+    elif args.command == 'add-appointment':
+        add_appointment(data, args)
+    elif args.command == 'add-metric':
+        add_metric(data, args)
+    elif args.command == 'add-medication':
+        add_medication(data, args)
+    elif args.command == 'add-insurance':
+        add_insurance(data, args)
+    elif args.command == 'add-contact':
+        add_contact(data, args)
+    elif args.command == 'list-appointments':
+        list_appointments(data, args)
+    elif args.command == 'list-medications':
+        list_medications(data, args)
+    elif args.command == 'list-metrics':
+        list_metrics(data, args)
+    elif args.command == 'sync-calendar':
+        sync_calendar()
+
+if __name__ == '__main__':
+    main()

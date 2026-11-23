@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam M. Erickson - Resume for Java Developer Position</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+        }
+        .header {
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .name { 
+            font-size: 28px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .contact {
+            color: #555;
+            font-size: 14px;
+        }
+        .contact a { color: #2980b9; text-decoration: none; }
+        .section {
+            margin-bottom: 25px;
+        }
+        .section h2 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .skill {
+            background: #ecf0f1;
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 13px;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+        .experience {
+            margin-bottom: 20px;
+        }
+        .job-title {
+            font-weight: bold;
+            font-size: 16px;
+            color: #2c3e50;
+        }
+        .company {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+        .dates {
+            color: #95a5a6;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+        .job-bullets {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+        .job-bullets li {
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .job-bullets li:before {
+            content: "•";
+            color: #27ae60;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        .edu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .degree {
+            font-weight: bold;
+        }
+        .school {
+            color: #7f8c8d;
+        }
+        .clear { clear: both; }
+        .summary {
+            line-height: 1.6;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="name">Adam M. Erickson</div>
+        <div class="contact">
+            Whitehall, MI · (231) 343-7221 · <a href="mailto:adam@a-erickson.com">adam@a-erickson.com</a> | 
+            <a href="https://linkedin.com/in/ericksonadamm">LinkedIn</a> | 
+            <a href="https://github.com/ericksa">GitHub</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>PROFESSIONAL SUMMARY</h2>
+        <p class="summary">
+            Senior Software Engineer with 20+ years of enterprise experience and active DoD Secret clearance. Proven track record in Java development, Spring REST API architecture, and AWS GovCloud migration. Extensive experience building mission-critical credentialing and case management systems for federal clients. Expertise in AngularJS, JavaScript, HTML/CSS, Bootstrap, and Agile/SAFe methodologies. Available for immediate start with required on-site presence.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>TECHNICAL SKILLS</h2>
+        <div class="skills">
+            <span class="skill">Java (8, 11, 17, 21)</span>
+            <span class="skill">Spring Boot</span>
+            <span class="skill">Spring REST APIs</span>
+            <span class="skill">Spring MVC</span>
+            <span class="skill">Hibernate</span>
+            <span class="skill">AngularJS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">HTML/CSS</span>
+            <span class="skill">Bootstrap</span>
+            <span class="skill">JUnit 5</span>
+            <span class="skill">Git</span>
+            <span class="skill">Eclipse IDE</span>
+            <span class="skill">Agile/SAFe</span>
+            <span class="skill">AWS GovCloud</span>
+            <span class="skill">Federal Environment</span>
+            <span class="skill">DoD Security</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>PROFESSIONAL EXPERIENCE</h2>
+        
+        <div class="experience">
+            <div class="job-title">Senior Software Engineer (Contract)</div>
+            <div class="company">Trilogy Innovations LLC | Remote</div>
+            <div class="dates">March 2026 – June 2026</div>
+            <ul class="job-bullets">
+                <li>Architected a Central Messaging System for law enforcement using <strong>Java 21</strong>, Spring Boot, and Kafka with Avro messaging schemas</li>
+                <li>Developed request/response workflows routing data between Persons and Property teams for stolen items, vehicles, missing persons, and criminal records verification</li>
+                <li>Deployed containerized applications on Kubernetes/OpenShift in AWS using Tekton pipelines, ArgoCD, Helm charts, and JFrog Artifactory</li>
+                <li>Implemented security-first architecture with robust validation layers and secure API endpoints</li>
+                <li>Led team integration of Lombok @NonNull annotations to systematically eliminate NullPointerExceptions from legacy code</li>
+            </ul>
+        </div>
+
+        <div class="experience">
+            <div class="job-title">Lead Java Software Engineer</div>
+            <div class="company">North Stone LLC | Remote</div>
+            <div class="dates">March 2025 – July 2025</div>
+            <ul class="job-bullets">
+                <li>Modernized legacy Defense Health Agency (DHA) systems to AWS GovCloud <strong>Spring Boot microservices</strong> with circuit-breaker patterns</li>
+                <li>Achieved <strong>99.9% availability</strong> and reduced service downtime by <strong>50%</strong> through microservices architecture</li>
+                <li>Designed secure cross-domain data exchange using SQL-proxy microservices processing <strong>1M+ DMDC personnel records</strong> with zero data loss</li>
+                <li>Implemented test-first development using JUnit and automated security scanning for <strong>DISA STIG compliance</strong></li>
+                <li>Ensured <strong>NIST 800-53</strong> compliance for all data handling processes</li>
+            </ul>
+        </div>
+
+        <div class="experience">
+            <div class="job-title">Lead Java Software Engineer</div>
+            <div class="company">DDC Dine | Remote</div>
+            <div class="dates">April 2024 – February 2025</div>
+            <ul class="job-bullets">
+                <li>Engineered stateful deduplication mechanism using <strong>Kafka Streams State Store (RocksDB)</strong> to eliminate external database dependencies</li>
+                <li>Built event-driven <strong>HL7-to-JSON conversion service</strong> using Pub/Sub messaging for Navy Medical Online</li>
+                <li><strong>Reduced data-delivery latency by 35%</strong> through optimized pipeline architecture</li>
+                <li>Resolved <strong>35% of all available bugs</strong> on a 9-developer team, improving sprint velocity and stability</li>
+                <li>Deployed containerized microservices on Kubernetes using GitLab CI/CD and GitOps workflows</li>
+            </ul>
+        </div>
+
+        <div class="experience">
+            <div class="job-title">Software Engineer</div>
+            <div class="company">SpinSys LLC | Remote</div>
+            <div class="dates">July 2021 – November 2023</div>
+            <ul class="job-bullets">
+                <li>Led migration of legacy DoD systems to <strong>AWS GovCloud</strong> using <strong>Spring Boot microservices</strong></li>
+                <li>Managed high-availability infrastructure maintaining <strong>rigorous security standards</strong> for defense contracts</li>
+                <li>Designed RESTful <strong>HL7-to-JSON pipeline</strong> for Navy Medical Online, cutting data delivery latency by <strong>35%</strong></li>
+                <li>Maintained <strong>DISA STIGs</strong> and <strong>RMF</strong> security compliance across all deployments</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>EDUCATION</h2>
+        <div class="edu">
+            <div class="degree">Master of Science, Information Systems Management</div>
+            <div class="school">Ferris State University</div>
+        </div>
+        <div class="dates">Magna Cum Laude</div>
+        <div class="edu" style="margin-top: 10px;">
+            <div class="degree">Bachelor of Science, Computer Information Systems</div>
+            <div class="school">Ferris State University</div>
+        </div>
+        <div class="dates">Cum Laude</div>
+        <div class="edu" style="margin-top: 10px;">
+            <div class="degree">Associate of Applied Science, Programming</div>
+            <div class="school">Muskegon Community College</div>
+        </div>
+        <div class="dates">C#/.NET curriculum</div>
+    </div>
+
+    <div class="section">
+        <h2>CERTIFICATIONS & CLEARANCE</h2>
+        <ul class="job-bullets">
+            <li><strong>Active DoD Secret Clearance (Tier 3)</strong> — Issued 2022, Current</li>
+            <li><strong>NSA/DoD Information Assurance (CNSS 4011-4016)</strong> — Active</li>
+            <li><strong>AWS Certified Developer – Associate</strong> — Renewal in Progress</li>
+            <li><strong>CompTIA Security+ CE (DoD 8570 Aligned)</strong> — Expected September 2026</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>KEY ACHIEVEMENTS</h2>
+        <div class="skills">
+            <span class="skill">50% downtime reduction</span>
+            <span class="skill">99.9% availability</span>
+            <span class="skill">60% throughput increase</span>
+            <span class="skill">35% latency reduction</span>
+            <span class="skill">75% deployment time reduction</span>
+            <span class="skill">85% test coverage</span>
+            <span class="skill">1M+ records processed</span>
+            <span class="skill">$50K cost savings</span>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+</body>
+</html>
