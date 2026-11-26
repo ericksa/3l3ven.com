@@ -10,6 +10,8 @@ This is the official website for 3l3ven.com, the digital presence of Eleven Ente
 
 This site is automatically deployed to GitHub Pages via GitHub Actions when changes are pushed to the `main` branch.
 
+**Latest update**: 2026-11-26 - Site content ready for VitePress deployment
+
 ## Repository
 
 - GitHub: https://github.com/ericksa/3l3ven.com
