@@ -103,8 +103,16 @@
             background: var(--primary);
             transition: var(--transition);
         }
-        
+
         .nav-links a:hover::after { width: 100%; }
+
+        /* Improved header with stronger visual hierarchy */
+        .logo {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
         
         .btn-nav { 
             background: var(--primary); 
@@ -366,24 +374,62 @@
             font-weight: bold;
         }
         
-        /* Booking Section */
-        .booking-hero { 
+        /* Booking Section - Enhanced visibility */
+        .booking-hero {
             background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--tertiary) 100%);
-            padding: 6rem 0;
+            padding: 8rem 0;
             text-align: center;
             position: relative;
             overflow: hidden;
+        }
+
+        .booking-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 30% 30%, rgba(255,107,53,0.15) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        .booking-hero h2 {
+            position: relative;
+            z-index: 2;
+            color: var(--white);
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .booking-hero p {
+            position: relative;
+            z-index: 2;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            font-size: 1.3rem;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
         
         .booking-hero h2 { color: var(--white); }
         .booking-hero p { color: var(--text-light); margin-bottom: 3rem; font-size: 1.2rem; }
         
         .calendar-wrapper {
-            background: rgba(255,255,255,0.05);
+            background: rgba(255,255,255,0.08);
             border-radius: 24px;
-            padding: 3rem;
-            border: 1px solid rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
+            padding: 3.5rem;
+            border: 2px solid var(--primary);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            backdrop-filter: blur(15px);
+            position: relative;
+            z-index: 2;
+        }
+
+        .calendar-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -15px; left: 0; right: -15px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
+            border-radius: 24px;
         }
         
         .calendar-frame {
@@ -391,6 +437,7 @@
             height: 700px;
             border: none;
             border-radius: 12px;
+            background: white;
         }
         
         /* Contact Section */
