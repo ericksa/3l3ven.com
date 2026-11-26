@@ -50,6 +50,7 @@ The built output will be in `docs/.vitepress/dist/`.
 │   └── .vitepress/
 │       ├── config.ts           # VitePress configuration
 │       └── cname               # Custom domain file
+├── index.html                  # Main website (enhanced design + Google Calendar)
 ├── package.json
 └── README.md
 ```
@@ -57,8 +58,7 @@ The built output will be in `docs/.vitepress/dist/`.
 ## Features
 
 - Home page with hero section and key highlights
-- About page with DJ biography and equipment info
-- Booking form for event reservations
-- Contact page with location map and contact info
-- Responsive design for all devices
-- SEO optimized with social preview images
+- DJ service packages with pricing ($300/$500/$800)
+- Google Calendar appointment scheduling
+- Mobile-responsive design
+- Contact form integration
