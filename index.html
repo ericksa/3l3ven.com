@@ -3,132 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DJ & Entertainment Booking | Eleven Entertainment - Professional DJ services for weddings, corporate events, parties, and special occasions in West Michigan.">
+    <meta name="description" content="DJ & Entertainment Booking | Eleven Entertainment - Professional DJ services for weddings, corporate events, parties, and special occasions in West Michigan">
     <title>3l3ven.com | Eleven Entertainment DJ Services</title>
     <style>
+        :root {
+            --primary: #ff6b35;
+            --primary-dark: #e65a2e;
+            --secondary: #1a1a2e;
+            --accent: #ff8c42;
+            --light: #f8f9fa;
+            --text: #2d3748;
+            --text-light: #4a5568;
+            --success: #48bb78;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html { scroll-behavior: smooth; }
+        
         body { 
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--secondary);
+            color: var(--text);
             min-height: 100vh;
-            padding: 2rem;
+            line-height: 1.6;
         }
-        .container { max-width: 900px; margin: 0 auto; }
-        h1 { font-size: 2.5rem; margin-bottom: 1rem; color: #ff6b35; }
-        h2 { font-size: 1.5rem; margin: 2rem 0 1rem; color: #fff; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        
+        /* Header/Navigation */
+        header { 
+            background: rgba(26, 27, 46, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 107, 53, 0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 0;
+        }
+        
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); letter-spacing: 1px; }
+        
+        .nav-links { display: flex; gap: 2rem; }
+        
+        .nav-links a { color: var(--text-light); text-decoration: none; transition: color 0.3s; font-weight: 500; }
+        
+        .nav-links a:hover { color: var(--primary); }
+        
+        .btn-nav { background: var(--primary); color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; transition: background 0.3s; }
+        
+        .btn-nav:hover { background: var(--primary-dark); }
+        
+        /* Hero Section */
         .hero { 
-            text-align: center; 
-            padding: 3rem 1rem;
-            margin-bottom: 2rem;
-            background: rgba(255,255,255,0.05);
-            border-radius: 12px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
         }
-        .btn { 
-            display: inline-block; 
-            background: #ff6b35; 
-            color: #fff; 
-            padding: 12px 24px; 
-            border-radius: 8px; 
-            text-decoration: none; 
-            font-weight: bold;
-            transition: all 0.3s;
+        
+        .hero::before { 
+            content: ''; 
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(255,107,53,0.15) 0%, transparent 50%);
         }
-        .btn:hover { 
-            background: #ff8c42; 
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        
+        .hero h1 { 
+            font-size: 3.5rem; 
+            margin-bottom: 1rem; 
+            background: linear-gradient(135deg, var(--text) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
         }
-        table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
-        th, td { padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
-        th { background: rgba(255,255,255,0.05); }
-        .highlight { color: #ff6b35; font-weight: bold; }
-        .contact { background: rgba(0,0,0,0.2); padding: 1.5rem; border-radius: 8px; margin-top: 2rem; }
-        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-        .feature { background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px; }
-        .feature h3 { color: #ff6b35; margin-bottom: 0.5rem; }
-        .footer { text-align: center; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.6); }
+        
+        .tagline { 
+            font-size: 1.3rem; 
+            color: var(--text-light); 
+            margin-bottom: 2rem; 
+            letter-spacing: 1px;
+        }
+        
+        .hero .btn { 
+            margin: 0 10px;
+        }
+        
+        /* Sections */
+        .section { padding: 4rem 0; }
+        
+        .section h2 { font-size: 2rem; margin-bottom: 2rem; color: var(--primary); border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem; }
+        
+        .section h3 { font-size: 1.3rem; margin: 2rem 0 1rem; color: var(--primary-dark); }
+        
+        /* Packages Table */
+        .packages { margin: 2rem 0; }
+        
+        .packages table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        
+        .packages th, .packages td { padding: 1rem 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); text-align: left; }
+        
+        .packages th { background: rgba(255,107,53,0.1); color: var(--primary); }
+        
+        .packages tr:nth-child(even) { background: rgba(255,107,53,0.05); }
+        
+        .packages .highlight { color: var(--primary); font-weight: bold; }
+        
+        /* Features Grid */
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        
+        .feature { background: rgba(26,27,46,0.5); padding: 1.5rem; border-radius: 10px; backdrop-filter: blur(5px); transition: transform 0.3s; }
+        
+        .feature:hover { transform: translateY(-5px); }
+        
+        .feature h3 { color: var(--primary); margin-bottom: 0.5rem; }
+        
+        /* Contact */
+        .contact { background: rgba(26,27,46,0.5); padding: 2rem; border-radius: 10; margin-top: 2rem; backdrop-filter: blur(5px); }
+        
+        .contact p { margin-bottom: 0.5rem; }
+        
+        .contact a { color: var(--primary); text-decoration: none; font-weight: bold; }
+        
+        .contact a:hover { color: var(--accent); }
+        
+        /* Footer */
+        footer { text-align: center; padding: 3rem 0; margin-top: 4rem; color: var(--text-light); border-top: 1px solid rgba(255,255,255,0.1); }
+        
+        /* Responsive */
+        @media (max-width: 768px) { 
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="hero">
-            <h1>🎧 Eleven Entertainment</h1>
-            <p style="font-size: 1.2rem; color: #ccc; margin-bottom: 1rem;">DJ | Music | Events</p>
-            <a href="mailto:booking@3l3ven.com" class="btn">Book Your Event</a>
+    <header>
+        <div class="container nav-container">
+            <div class="logo">🎧 Eleven Entertainment</div>
+            <nav>
+                <a href="#services" class="nav-links">Services</a>
+                <a href="#packages" class="nav-links">Packages</a>
+                <a href="#contact" class="nav-links">Contact</a>
+                <a href="#" class="btn-nav">Book Now</a>
+            </nav>
         </div>
+    </header>
 
-        <h2>🎵 Our Services</h2>
-        
-        <h3>DJ Services</h3>
-        <p>Professional DJ services for weddings, corporate events, parties, and special occasions.</p>
-        
-        <table>
-            <thead>
-                <tr>
-                    <th>Package</th>
-                    <th>Price</th>
-                    <th>Features</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Essentials</strong></td>
-                    <td class="highlight">$300</td>
-                    <td>4 hours, basic lighting</td>
-                </tr>
-                <tr>
-                    <td><strong>Premium</strong></td>
-                    <td class="highlight">$500</td>
-                    <td>6 hours, advanced lighting, MC</td>
-                </tr>
-                <tr>
-                    <td><strong>Ultimate</strong></td>
-                    <td class="highlight">$800</td>
-                    <td>8 hours, full lighting, MC, DJ booth</td>
-                </tr>
-            </tbody>
-        </table>
+    <section class="hero">
+        <h1>Eleven Entertainment</h1>
+        <p class="tagline">Professional DJ & Event Entertainment Services</p>
+        <div class="btn-group">
+            <a href="#contact" class="btn">Book Your Event</a>
+            <a href="mailto:booking@3l3ven.com" class="btn">Contact Us</a>
+        </div>
+    </section>
 
-        <div class="features">
-            <div class="feature">
-                <h3>📱 Wedding DJ</h3>
-                <p>Custom playlists, professional equipment, experienced MC</p>
+    <main>
+        <section class="section" id="services">
+            <div class="container">
+                <h2>🎵 Our Services</h2>
+                
+                <div class="features-grid">
+                    <div class="feature">
+                        <h3>🎚️ DJ Services</h3>
+                        <p>Professional DJ services for weddings, corporate events, parties, and special occasions. Custom playlists, premium sound equipment, and lighting setup.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>🎤 Event MC</h3>
+                        <p>Professional master of ceremonies to keep your event flowing smoothly. Announcements, timing, and crowd engagement.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>🎧 Playlist Curation</h3>
+                        <p>Personalized music selection service for any occasion. Custom playlists tailored to your taste and event style.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>📹 Video Production</h3>
+                        <p>Corporate videos, event footage, and promotional content creation for West Michigan businesses. High-quality production and editing.</p>
+                    </div>
+                </div>
             </div>
-            <div class="feature">
-                <h3>🏢 Corporate Events</h3>
-                <p>Brand-appropriate music, event coordination, reliable setup</p>
+        </section>
+
+        <section class="section" id="packages">
+            <div class="container">
+                <h2>💰 Pricing Packages</h2>
+                <p style="margin-bottom: 2rem;">Choose the package that best fits your event needs</p>
+                
+                <table class="packages">
+                    <thead>
+                        <tr>
+                            <th>Package</th>
+                            <th>Price</th>
+                            <th>Features</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Essentials</strong></td>
+                            <td class="highlight">$300</td>
+                            <td>4 hours, basic lighting, playlist curation</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Premium</strong></td>
+                            <td class="highlight">$500</td>
+                            <td>6 hours, advanced lighting, MC included</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ultimate</strong></td>
+                            <td class="highlight">$800</td>
+                            <td>8 hours, full lighting, MC, DJ booth, playlist curation</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--text-light);">
+                    * Prices are base rates. Additional services available upon request.
+                </p>
             </div>
-            <div class="feature">
-                <h3>🎉 Private Parties</h3>
-                <p>High-energy sets, crowd reading, special requests</p>
+        </section>
+
+        <section class="section" id="contact">
+            <div class="container">
+                <h2>📞 Contact & Booking</h2>
+                
+                <div class="contact">
+                    <p><strong>📧 Email:</strong> <a href="mailto:booking@3l3ven.com">booking@3l3ven.com</a></p>
+                    <p><strong>📱 Phone:</strong> (231) 343-7221</p>
+                    <p><strong>📍 Location:</strong> Whitehall, MI (serving West Michigan)</p>
+                    <p><strong>⏰ Availability:</strong> Weekends and evenings available</p>
+                    
+                    <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-light);">
+                        <strong>Booking Process:</strong> 1. Contact us with event details → 2. We check availability and send a quote → 3. 50% deposit secures your date → 4. Event day - we bring the energy!
+                    </p>
+                </div>
             </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Eleven Entertainment LLC | Professional DJ & Event Services in West Michigan</p>
+            <p>Powered by Eleven Entertainment | <a href="https://3l3ven.com" style="color: var(--primary);">3l3ven.com</a></p>
         </div>
-
-        <h2>📅 Book Your Event</h2>
-        <div class="contact">
-            <p><strong>Email:</strong> <a href="mailto:booking@3l3ven.com" style="color: #ff6b35;">booking@3l3ven.com</a></p>
-            <p><strong>Phone:</strong> (231) 343-7221</p>
-            <p><strong>Location:</strong> Whitehall, MI (serving West Michigan)</p>
-            <p style="margin-top: 1rem;"><strong>Booking Process:</strong> Contact → Quote → 50% Deposit → Event Day!</p>
-        </div>
-
-        <h2>🏢 About Eleven Entertainment</h2>
-        <p><strong>ELEVEN ENTERTAINMENT LLC</strong> is a Michigan-registered LLC specializing in professional DJ services and event entertainment.</p>
-        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
-            <li><strong>Formation:</strong> February 22, 2024</li>
-            <li><strong>ID:</strong> 803018140</li>
-            <li><strong>Status:</strong> Active until December 31, 2029</li>
-        </ul>
-
-        <p style="margin-top: 2rem; color: #ccc;">
-            Venues and artists trust us to deliver on time, every time. 
-            Serving West Michigan including Grand Rapids, Muskegon, Ludington.
-        </p>
-
-        <div class="footer">
-            <p>© 2026 Eleven Entertainment | DJ Services in West Michigan</p>
-        </div>
-    </div>
+    </footer>
 </body>
 </html>
