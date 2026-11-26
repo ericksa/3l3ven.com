@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: jekyll/default
 title: 3l3ven | Eleven Entertainment
 ---
 
@@ -33,7 +33,7 @@ Professional master of ceremonies to keep your event flowing smoothly.
 Personalized music selection service for any occasion.
 
 ### Video Production
-Event footage and promotional content creation for West Michigan businesses.
+Corporate videos, event footage, and promotional content creation for West Michigan businesses.
 
 ---
 
