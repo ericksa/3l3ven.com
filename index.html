@@ -3,18 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DJ & Entertainment Booking | Eleven Entertainment - Professional DJ services for weddings, corporate events, parties, and special occasions in West Michigan">
-    <title>3l3ven.com | Eleven Entertainment DJ Services</title>
+    <meta name="description" content="Eleven Entertainment - Professional DJ & Event Entertainment Services in West Michigan. DJ services for weddings, corporate events, parties & festivals. Book now!">
+    <title>Eleven Entertainment | West Michigan DJ & Event Entertainment</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎧%3C/text%3E%3C/svg%3E">
     <style>
         :root {
             --primary: #ff6b35;
             --primary-dark: #e65a2e;
+            --primary-light: #ffa07a;
             --secondary: #1a1a2e;
-            --accent: #ff8c42;
+            --secondary-dark: #0f1020;
+            --tertiary: #16213e;
+            --accent: #ffa07a;
             --light: #f8f9fa;
             --text: #2d3748;
-            --text-light: #4a5568;
+            --text-light: #718096;
+            --white: #ffffff;
             --success: #48bb78;
+            --shadow: 0 20px 40px rgba(0,0,0,0.3);
+            --shadow-sm: 0 4px 12px rgba(0,0,0,0.15);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -22,40 +30,100 @@
         html { scroll-behavior: smooth; }
         
         body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: var(--secondary);
-            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #0f1020 0%, #1a1a2e 50%, #16213e 100%);
+            color: var(--white);
             min-height: 100vh;
             line-height: 1.6;
+            overflow-x: hidden;
         }
         
         .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
         
+        /* Animated Background Elements */
+        .bg-glow {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255,107,53,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(25,133,255,0.1) 0%, transparent 50%);
+        }
+        
         /* Header/Navigation */
         header { 
-            background: rgba(26, 27, 46, 0.8);
-            backdrop-filter: blur(10px);
+            background: rgba(26, 27, 46, 0.85);
+            backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(255,107,53,0.2);
             position: fixed;
             width: 100%;
             top: 0;
-            z-index: 100;
-            padding: 1rem 0;
+            z-index: 1000;
+            padding: 1.2rem 0;
+            transition: var(--transition);
         }
+        
+        header.scrolled { padding: 0.8rem 0; box-shadow: var(--shadow-sm); }
         
         .nav-container { display: flex; justify-content: space-between; align-items: center; }
         
-        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); letter-spacing: 1px; }
+        .logo { 
+            font-size: 1.75rem; 
+            font-weight: 800; 
+            color: var(--primary); 
+            letter-spacing: 2px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
         
-        .nav-links { display: flex; gap: 2rem; }
+        .logo:hover { color: var(--primary-light); }
         
-        .nav-links a { color: var(--text-light); text-decoration: none; transition: color 0.3s; font-weight: 500; }
+        .nav-links { display: flex; gap: 2.5rem; align-items: center; }
+        
+        .nav-links a { 
+            color: var(--white); 
+            text-decoration: none; 
+            font-weight: 500; 
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative;
+        }
         
         .nav-links a:hover { color: var(--primary); }
         
-        .btn-nav { background: var(--primary); color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; transition: background 0.3s; }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
         
-        .btn-nav:hover { background: var(--primary-dark); }
+        .nav-links a:hover::after { width: 100%; }
+        
+        .btn-nav { 
+            background: var(--primary); 
+            color: var(--white); 
+            padding: 0.8rem 1.5rem; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(255,107,53,0.4);
+        }
+        
+        .btn-nav:hover { 
+            background: var(--primary-dark); 
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,107,53,0.5);
+        }
+        
+        .mobile-menu-btn { display: none; color: var(--white); font-size: 1.5rem; background: none; border: none; cursor: pointer; }
         
         /* Hero Section */
         .hero { 
@@ -64,235 +132,452 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 8rem 2rem 4rem;
+            padding: 10rem 2rem 5rem;
             position: relative;
             overflow: hidden;
         }
         
-        .hero::before { 
-            content: ''; 
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(135deg, rgba(255,107,53,0.15) 0%, transparent 50%);
-        }
+        .hero-content { position: relative; z-index: 1; max-width: 800px; }
         
         .hero h1 { 
-            font-size: 3.5rem; 
-            margin-bottom: 1rem; 
-            background: linear-gradient(135deg, var(--text) 0%, var(--primary) 100%);
+            font-size: clamp(2.5rem, 5vw, 4.5rem); 
+            margin-bottom: 1.5rem; 
+            background: linear-gradient(135deg, var(--white) 0%, var(--primary-light) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: 2px;
+            letter-spacing: -1px;
+            line-height: 1.1;
         }
         
         .tagline { 
-            font-size: 1.3rem; 
+            font-size: clamp(1.1rem, 2vw, 1.4rem); 
             color: var(--text-light); 
-            margin-bottom: 2rem; 
-            letter-spacing: 1px;
+            margin-bottom: 3rem; 
+            font-weight: 300;
         }
         
-        .hero .btn { 
-            margin: 0 10px;
+        .hero-buttons { 
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         
-        /* Sections */
-        .section { padding: 4rem 0; }
-        
-        .section h2 { font-size: 2rem; margin-bottom: 2rem; color: var(--primary); border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem; }
-        
-        .section h3 { font-size: 1.3rem; margin: 2rem 0 1rem; color: var(--primary-dark); }
-        
-        /* Packages Table */
-        .packages { margin: 2rem 0; }
-        
-        .packages table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-        
-        .packages th, .packages td { padding: 1rem 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); text-align: left; }
-        
-        .packages th { background: rgba(255,107,53,0.1); color: var(--primary); }
-        
-        .packages tr:nth-child(even) { background: rgba(255,107,53,0.05); }
-        
-        .packages .highlight { color: var(--primary); font-weight: bold; }
-        
-        /* Features Grid */
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-        
-        .feature { background: rgba(26,27,46,0.5); padding: 1.5rem; border-radius: 10px; backdrop-filter: blur(5px); transition: transform 0.3s; }
-        
-        .feature:hover { transform: translateY(-5px); }
-        
-        .feature h3 { color: var(--primary); margin-bottom: 0.5rem; }
-        
-        /* Contact */
-        .contact { background: rgba(26,27,46,0.5); padding: 2rem; border-radius: 10; margin-top: 2rem; backdrop-filter: blur(5px); }
-        
-        .contact p { margin-bottom: 0.5rem; }
-        
-        .contact a { color: var(--primary); text-decoration: none; font-weight: bold; }
-        
-        .contact a:hover { color: var(--accent); }
-        
-        /* Booking Section */
-        .booking-section { 
-            background: linear-gradient(135deg, var(--secondary) 0%, #16213e 100%);
-            padding: 6rem 2rem 4rem;
-            margin-top: 4rem;
+        .btn { 
+            padding: 1rem 2rem; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
         }
         
-        .booking-section h2 { 
+        .btn-primary { 
+            background: var(--primary); 
+            color: var(--white);
+            box-shadow: 0 4px 20px rgba(255,107,53,0.4);
+        }
+        
+        .btn-primary:hover { 
+            background: var(--primary-dark); 
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255,107,53,0.5);
+        }
+        
+        .btn-secondary { 
+            background: transparent; 
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .btn-secondary:hover { 
+            border-color: var(--primary);
+            background: rgba(255,107,53,0.1);
+            transform: translateY(-3px);
+        }
+        
+        /* Section Styles */
+        .section { padding: 5rem 0; position: relative; }
+        
+        .section h2 { 
             font-size: 2.5rem; 
             text-align: center; 
-            margin-bottom: 1.5rem;
-            color: white;
-            border: none;
-        }
-        
-        .booking-section p { 
-            text-align: center; 
-            color: rgba(255,255,255,0.8); 
             margin-bottom: 3rem;
-            font-size: 1.1rem;
+            color: var(--white);
+            position: relative;
         }
         
-        .calendar-container {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 4rem;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Features Grid */
+        .features-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 2rem; 
+            margin-top: 3rem;
+        }
+        
+        .feature { 
+            background: rgba(255,255,255,0.05); 
+            padding: 2.5rem 2rem; 
+            border-radius: 20px; 
+            transition: var(--transition);
+            border: 1px solid rgba(255,255,255,0.08);
+            position: relative;
             overflow: hidden;
         }
         
-        .calendar-frame {
-            border: none;
-            width: 100%;
-            height: 700px;
+        .feature::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
         }
         
+        .feature:hover { 
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,107,53,0.3);
+            box-shadow: var(--shadow);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .feature h3 { 
+            color: var(--white); 
+            margin-bottom: 1rem; 
+            font-size: 1.4rem;
+        }
+        
+        .feature p { 
+            color: var(--text-light); 
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+        
+        /* Pricing Section */
+        .pricing { 
+            background: rgba(22,33,62,0.4);
+        }
+        
+        .pricing-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 2rem; 
+            margin-top: 3rem;
+        }
+        
+        .package-card { 
+            background: rgba(255,255,255,0.05); 
+            padding: 3rem 2rem; 
+            border-radius: 24px; 
+            transition: var(--transition);
+            border: 2px solid rgba(255,255,255,0.05);
+            position: relative;
+            text-align: center;
+        }
+        
+        .package-card:hover { 
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow);
+        }
+        
+        .package-card.popular { 
+            border-color: var(--primary);
+            transform: scale(1.05);
+            z-index: 2;
+            background: rgba(255,107,53,0.1);
+        }
+        
+        .package-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .package-card h3 { 
+            font-size: 1.75rem; 
+            margin-bottom: 0.5rem; 
+            color: var(--white);
+        }
+        
+        .price { 
+            font-size: 3rem; 
+            font-weight: 800; 
+            color: var(--primary);
+            margin: 1rem 0;
+        }
+        
+        .price span { font-size: 1rem; color: var(--text-light); font-weight: 400; }
+        
+        .package-card p { color: var(--text-light); margin-bottom: 2rem; font-size: 0.95rem; }
+        
+        .package-features { list-style: none; margin-bottom: 2rem; text-align: left; }
+        
+        .package-features li { 
+            margin-bottom: 0.8rem; 
+            color: var(--text-light);
+            font-size: 0.9rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .package-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+        
+        /* Booking Section */
+        .booking-hero { 
+            background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--tertiary) 100%);
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .booking-hero h2 { color: var(--white); }
+        .booking-hero p { color: var(--text-light); margin-bottom: 3rem; font-size: 1.2rem; }
+        
+        .calendar-wrapper {
+            background: rgba(255,255,255,0.05);
+            border-radius: 24px;
+            padding: 3rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .calendar-frame {
+            width: 100%;
+            height: 700px;
+            border: none;
+            border-radius: 12px;
+        }
+        
+        /* Contact Section */
+        .contact-card { 
+            background: rgba(255,255,255,0.05); 
+            padding: 3rem; 
+            border-radius: 24px; 
+            margin-top: 3rem;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .contact-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 2rem; 
+        }
+        
+        .contact-item { 
+            display: flex; 
+            align-items: flex-start; 
+            gap: 1rem;
+        }
+        
+        .contact-icon { 
+            font-size: 1.5rem; 
+            color: var(--primary);
+            margin-top: 0.2rem;
+        }
+        
+        .contact-item h4 { color: var(--white); margin-bottom: 0.3rem; }
+        .contact-item p { color: var(--text-light); font-size: 0.95rem; }
+        
+        .contact-item a { color: var(--primary); text-decoration: none; font-weight: 600; transition: var(--transition); }
+        .contact-item a:hover { color: var(--primary-light); }
+        
         /* Footer */
-        footer { text-align: center; padding: 3rem 0; margin-top: 4rem; color: var(--text-light); border-top: 1px solid rgba(255,255,255,0.1); }
+        footer { 
+            text-align: center; 
+            padding: 4rem 0; 
+            margin-top: 4rem; 
+            color: var(--text-light); 
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+        
+        .footer-links { margin-bottom: 1rem; }
+        
+        .footer-links a { color: var(--primary); text-decoration: none; margin: 0 1rem; font-size: 0.9rem; transition: var(--transition); }
+        .footer-links a:hover { color: var(--primary-light); }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .feature, .package-card { animation: fadeInUp 0.6s ease-out both; }
+        .feature:nth-child(2) { animation-delay: 0.1s; }
+        .feature:nth-child(3) { animation-delay: 0.2s; }
+        .feature:nth-child(4) { animation-delay: 0.3s; }
         
         /* Responsive */
         @media (max-width: 768px) { 
-            .hero h1 { font-size: 2.5rem; }
             .nav-links { display: none; }
-            .packages table { font-size: 0.9rem; }
-            .packages th, .packages td { padding: 0.8rem 1rem; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .hero-buttons .btn { width: 200px; text-align: center; }
+            .container { padding: 0 1rem; }
+            .calendar-wrapper { padding: 2rem 1.5rem; }
             .calendar-frame { height: 600px; }
         }
     </style>
 </head>
 <body>
+    <div class="bg-glow"></div>
+    
     <header>
         <div class="container nav-container">
-            <div class="logo">🎧 Eleven Entertainment</div>
+            <a href="/" class="logo">🎧 Eleven Entertainment</a>
             <nav>
                 <a href="#services" class="nav-links">Services</a>
                 <a href="#packages" class="nav-links">Packages</a>
-                <a href="#booking" class="nav-links">Booking</a>
+                <a href="#booking" class="nav-links">Book Online</a>
                 <a href="#contact" class="nav-links">Contact</a>
-                <a href="#" class="btn-nav">Book Now</a>
             </nav>
+            <a href="#booking" class="btn-nav">Book Now</a>
         </div>
     </header>
 
     <section class="hero">
-        <h1>Eleven Entertainment</h1>
-        <p class="tagline">Professional DJ & Event Entertainment Services</p>
-        <div class="btn-group">
-            <a href="#booking" class="btn">Book Your Event</a>
-            <a href="mailto:booking@3l3ven.com" class="btn">Contact Us</a>
+        <div class="hero-content">
+            <h1>Eleven Entertainment</h1>
+            <p class="tagline">Professional DJ & Event Entertainment Services for West Michigan</p>
+            <div class="hero-buttons">
+                <a href="#booking" class="btn btn-primary">Book Your Event</a>
+                <a href="#services" class="btn btn-secondary">View Services</a>
+            </div>
         </div>
     </section>
 
     <main>
         <section class="section" id="services">
             <div class="container">
-                <h2>🎵 Our Services</h2>
+                <h2>Our Services</h2>
+                <p class="section-subtitle">Professional entertainment for every occasion</p>
                 
                 <div class="features-grid">
                     <div class="feature">
-                        <h3>🎚️ DJ Services</h3>
+                        <span class="feature-icon">🎚️</span>
+                        <h3>DJ Services</h3>
                         <p>Professional DJ services for weddings, corporate events, parties, and special occasions. Custom playlists, premium sound equipment, and lighting setup.</p>
                     </div>
                     <div class="feature">
-                        <h3>🎤 Event MC</h3>
-                        <p>Professional master of ceremonies to keep your event flowing smoothly. Announcements, timing, and crowd engagement.</p>
+                        <span class="feature-icon">🎤</span>
+                        <h3>Event MC</h3>
+                        <p>Professional master of ceremonies to keep your event flowing smoothly. Announcements, timing, crowd engagement, and seamless transitions.</p>
                     </div>
                     <div class="feature">
-                        <h3>🎧 Playlist Curation</h3>
-                        <p>Personalized music selection service for any occasion. Custom playlists tailored to your taste and event style.</p>
+                        <span class="feature-icon">🎧</span>
+                        <h3>Playlist Curation</h3>
+                        <p>Personalized music selection service for any occasion. Custom playlists tailored to your taste, event style, and guest preferences.</p>
                     </div>
                     <div class="feature">
-                        <h3>📹 Video Production</h3>
+                        <span class="feature-icon">📹</span>
+                        <h3>Video Production</h3>
                         <p>Corporate videos, event footage, and promotional content creation for West Michigan businesses. High-quality production and editing.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section" id="packages">
+        <section class="section pricing" id="packages">
             <div class="container">
-                <h2>💰 Pricing Packages</h2>
-                <p style="margin-bottom: 2rem;">Choose the package that best fits your event needs</p>
+                <h2>Pricing Packages</h2>
+                <p class="section-subtitle">Choose the package that best fits your event needs</p>
                 
-                <table class="packages">
-                    <thead>
-                        <tr>
-                            <th>Package</th>
-                            <th>Price</th>
-                            <th>Features</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Essentials</strong></td>
-                            <td class="highlight">$300</td>
-                            <td>4 hours, basic lighting, playlist curation</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Premium</strong></td>
-                            <td class="highlight">$500</td>
-                            <td>6 hours, advanced lighting, MC included</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Ultimate</strong></td>
-                            <td class="highlight">$800</td>
-                            <td>8 hours, full lighting, MC, DJ booth, playlist curation</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--text-light);">
-                    * Prices are base rates. Additional services available upon request.
-                </p>
-            </div>
-        </section>
-
-        <section class="section" id="contact">
-            <div class="container">
-                <h2>📞 Contact & Booking</h2>
-                
-                <div class="contact">
-                    <p><strong>📧 Email:</strong> <a href="mailto:booking@3l3ven.com">booking@3l3ven.com</a></p>
-                    <p><strong>📱 Phone:</strong> (231) 343-7221</p>
-                    <p><strong>📍 Location:</strong> Whitehall, MI (serving West Michigan)</p>
-                    <p><strong>⏰ Availability:</strong> Weekends and evenings available</p>
+                <div class="pricing-grid">
+                    <div class="package-card">
+                        <h3>Essentials</h3>
+                        <div class="price">$300<span>/event</span></div>
+                        <p>Perfect for smaller gatherings and intimate events</p>
+                        <ul class="package-features">
+                            <li>4 hours of service</li>
+                            <li>Basic lighting setup</li>
+                            <li>Custom playlist curation</li>
+                            <li>Professional sound equipment</li>
+                        </ul>
+                        <a href="#booking" class="btn btn-primary" style="width: 100%; text-align: center;">Book Essentials</a>
+                    </div>
                     
-                    <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-light);">
-                        <strong>Booking Process:</strong> 1. Contact us with event details → 2. We check availability and send a quote → 3. 50% deposit secures your date → 4. Event day - we bring the energy!
-                    </p>
+                    <div class="package-card popular">
+                        <div class="package-badge">Most Popular</div>
+                        <h3>Premium</h3>
+                        <div class="price">$500<span>/event</span></div>
+                        <p>Our most popular package for medium-sized events</p>
+                        <ul class="package-features">
+                            <li>6 hours of service</li>
+                            <li>Advanced lighting setup</li>
+                            <li>Event MC included</li>
+                            <li>Custom playlist curation</li>
+                        </ul>
+                        <a href="#booking" class="btn btn-primary" style="width: 100%; text-align: center;">Book Premium</a>
+                    </div>
+                    
+                    <div class="package-card">
+                        <h3>Ultimate</h3>
+                        <div class="price">$800<span>/event</span></div>
+                        <p>The complete package for large-scale celebrations</p>
+                        <ul class="package-features">
+                            <li>8 hours of service</li>
+                            <li>Full lighting & DJ booth</li>
+                            <li>Event MC included</li>
+                            <li>Custom playlist curation</li>
+                        </ul>
+                        <a href="#booking" class="btn btn-primary" style="width: 100%; text-align: center;">Book Ultimate</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Google Calendar Appointment Scheduling -->
-        <section class="booking-section" id="booking">
+        <!-- Google Calendar Booking Section -->
+        <section class="booking-hero" id="booking">
             <div class="container">
-                <h2>📅 Book Your Appointment</h2>
-                <p>Schedule a consultation with us directly through our Google Calendar. Choose a time that works for you and we'll confirm your booking!</p>
+                <h2>Book Your Event</h2>
+                <p>Schedule a consultation directly through our Google Calendar. Choose a time that works for you to discuss your event details and music preferences.</p>
                 
-                <div class="calendar-container">
+                <div class="calendar-wrapper">
                     <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2d2-0YR0WlSX9q2XqHM5e0xkbte3hp2awhQmTNl-Qgmb4CI2ZZbhtrbAo0DQ4QuIbo4q3mjEbw?gv=true" 
                             class="calendar-frame" 
                             title="Book an appointment with Eleven Entertainment"
@@ -300,13 +585,78 @@
                 </div>
             </div>
         </section>
+
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="contact-card">
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:booking@3l3ven.com">booking@3l3ven.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>(231) 343-7221</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Whitehall, MI<br>West Michigan</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">⏰</span>
+                            <div>
+                                <h4>Availability</h4>
+                                <p>Weekends & evenings<br>Available for booking</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <div class="container">
+            <div class="footer-links">
+                <a href="#services">Services</a>
+                <a href="#packages">Packages</a>
+                <a href="#booking">Book Online</a>
+                <a href="#contact">Contact</a>
+            </div>
             <p>© 2026 Eleven Entertainment LLC | Professional DJ & Event Services in West Michigan</p>
-            <p>Powered by Eleven Entertainment | <a href="https://3l3ven.com" style="color: var(--primary);">3l3ven.com</a></p>
         </div>
     </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
