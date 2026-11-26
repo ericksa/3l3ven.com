@@ -1,0 +1,43 @@
+# Personal/sensitive files - never commit
+.env
+*.env
+*.pdf
+*.docx
+*.doc
+*.dcm
+*.zip
+.DS_Store
+Thumbs.db
+
+# Personal folders
+Finance/
+Medical/
+Home/
+Piano/
+projects/
+resumes/
+skills/personal-health-tracker/
+templates/
+media/
+memory/
+
+# Personal config
+AGENTS.md
+AGENTS.md.bak-*
+IDENTITY.md
+MEMORY.md
+SOUL.md
+GOALS.md
+HEARTBEAT.md
+DREAMS.md
+WORKBOARD.md
+MVTF_Application.pdf
+cname
+CNAME
+calendar-rules.md
+email-rules.md
+health/
+
+# Job application files
+job_applications.md
+master-resume.md
