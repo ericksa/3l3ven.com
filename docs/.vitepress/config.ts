@@ -6,17 +6,16 @@ export default defineConfig({
   base: '/',
   themeConfig: {
     name: '3l3ven.com',
-    logo: '/logo.svg',
+    logo: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudmV0MS5vcmcvMjAwMC9wZCI+PHBhdGggZD0iTTI4IDJMMTMuMjkgMjQuNjdDMzkuNjkgMjguNDVDNTMuODUgMzkuMDcgNTMuODUgNDYuNDMgMzkuNjkgNTYuMjEgMjggNjMuMThDMTEuMzEgNjYuMjEgNS41NiA1Ni40NyA1LjU2IDQ2LjQzTDA0LjI5IDM4LjY1Qy0wLjY2IDM0LjI4IDAuNjYgMjkuNzIgMTAuMjkgMjUuNDVDMjIuMTcgMjAuNDcgMzcuNDggMjAuNDcgNTAuMjkgMjUuNDVDNTYuMTMgMjcuNjIgNjIuNDIgMzMuNDggNjYuNDQgNDAuMjVDNjYuNDQgNDcuMDcgNjIuMDMgNTUuNDUgNTUuNDUgNjEuMDhDMzguMTcgNjYuNDcgMjggNjYuNDcgMjggNjIuNDdaIiBmaWxsPSIjZmY2ZTMiLz48L3N2Zz4=',
     author: {
       name: 'Eleven Entertainment',
       link: 'https://3l3ven.com',
     },
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'About', link: '/about' },
-      { text: 'Music', link: '/music' },
-      { text: 'Events', link: '/events' },
-      { text: 'Booking', link: '/booking' },
+      { text: 'Home', link: '/', activeMatch: '^/([^/]*)$' },
+      { text: 'Services', link: '/services' },
+      { text: 'Packages', link: '/packages' },
+      { text: 'Book Online', link: '/booking' },
       { text: 'Contact', link: '/contact' },
     ],
     sidebar: [
@@ -25,8 +24,8 @@ export default defineConfig({
         items: [
           { text: 'Home', link: '/' },
           { text: 'About', link: '/about' },
-          { text: 'Music', link: '/music' },
-          { text: 'Events', link: '/events' },
+          { text: 'Services', link: '/services' },
+          { text: 'Packages', link: '/packages' },
           { text: 'Booking', link: '/booking' },
           { text: 'Contact', link: '/contact' },
         ],
@@ -34,8 +33,11 @@ export default defineConfig({
     ],
     socialPreview: {
       image: '/og-image.png',
-      title: '3l3ven.com',
-      description: 'DJ & Entertainment Booking | Eleven Entertainment',
+      title: '3l3ven.com - DJ & Entertainment Booking',
+      description: 'Premium DJ services for weddings, corporate events, parties, and special occasions in West Michigan.',
     },
   },
+  theme: './theme/index.js',
+  cleanUrls: true,
+  rollupSingleDependencies: false,
 })
