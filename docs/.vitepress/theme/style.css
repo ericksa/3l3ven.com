@@ -1,4 +1,4 @@
-/* 3l3ven.com - Eleven Entertainment Theme */
+/* 3l3ven.com - 11 Entertainment Theme */
 
 :root {
   --brand-primary: #ff6b35;
@@ -9,6 +9,49 @@
   --text-light: #ffffff;
   --shadow-default: 0 2px 8px rgba(0, 0, 0, 0.1);
   --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Branded Header Title Style */
+.brand-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.brand-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--text-light) 0%, var(--brand-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.brand-accent {
+  color: var(--brand-primary);
+  font-weight: 700;
+}
+
+.brand-accent::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: var(--brand-primary);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* Mobile responsive branded headers */
+@media (max-width: 768px) {
+  .brand-title {
+    font-size: 1.75rem;
+  }
+  
+  .brand-accent::after {
+    width: 80%;
+  }
 }
 
 /* Custom Header Navigation */

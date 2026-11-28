@@ -2,7 +2,7 @@
 ---
 
 <div class="hero">
-  <h1>About Eleven Entertainment</h1>
+  <h1 class="brand-title">11<span class="brand-accent">Entertainment</span> - About</h1>
   <p class="tagline">Your Premier DJ and Entertainment Service in West Michigan</p>
 </div>
 
@@ -13,8 +13,8 @@
       <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Adam Erickson - DJ" style="width: 100%; border-radius: 12px; box-shadow: var(--shadow-hover);" />
     </div>
     <div style="flex: 1;">
-      <p><strong>Eleven Entertainment LLC</strong> was founded in 2024 by Adam Erickson, a passionate music enthusiast with years of experience in bringing energy to events.</p>
-      <p>After building a career in tech and innovation, Adam discovered his true passion was creating memorable experiences through music. He founded Eleven Entertainment to provide West Michigan with premium DJ services that blend technical excellence with creative expression.</p>
+      <p><strong>11 Entertainment LLC</strong> was founded in 2024 by Adam Erickson, a passionate music enthusiast with years of experience in bringing energy to events.</p>
+      <p>After building a career in tech and innovation, Adam discovered his true passion was creating memorable experiences through music. He founded 11 Entertainment to provide West Michigan with premium DJ services that blend technical excellence with creative expression.</p>
     </div>
   </div>
 </div>

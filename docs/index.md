@@ -2,8 +2,10 @@
 ---
 
 <div class="hero">
-  <h1>Eleven Entertainment</h1>
-  <p class="tagline">DJ | Music | Events | West Michigan's Premier Entertainment Service</p>
+  <div class="brand-header">
+    <h1 class="brand-title">11<span class="brand-accent">Entertainment</span></h1>
+    <p class="brand-tagline">DJ | Music | Events | West Michigan's Premier Entertainment Service</p>
+  </div>
   <a class="btn" href="/booking" style="background:#ff6b35;color:#fff;padding:12px 32px;border-radius:8px;text-decoration:none;font-weight:bold;">Book Your Event</a>
   <a class="btn" href="/packages" style="background:transparent;color:#ff6b35;border:2px solid #ff6b35;padding:12px 32px;border-radius:8px;text-decoration:none;font-weight:bold;margin-left:1rem;">View Packages</a>
 </div>
@@ -40,7 +42,7 @@
 </div>
 
 <div class="card-section" style="background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(26, 26, 46, 0.5) 100%); max-width: 800px; margin: 0 auto; border: 1px solid rgba(255, 107, 53, 0.3);">
-  <h2 style="color: var(--brand-primary); margin-top: 0; text-align: center;">✅ Why Choose Eleven Entertainment?</h2>
+  <h2 style="color: var(--brand-primary); margin-top: 0; text-align: center;">✅ Why Choose 11 Entertainment?</h2>
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
     <div style="background: rgba(0,0,0,0.2); padding: 1rem; border-radius: 8px; text-align: center;">
       <span style="font-size: 1.5rem;">🎯</span>

@@ -2,7 +2,7 @@
 ---
 
 <div class="hero">
-  <h1>Contact Us</h1>
+  <h1 class="brand-title">11<span class="brand-accent">Entertainment</span> - Contact</h1>
   <p class="tagline">Ready to book your event or have questions? We'd love to hear from you!</p>
 </div>
 

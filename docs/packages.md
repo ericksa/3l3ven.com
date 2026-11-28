@@ -2,7 +2,7 @@
 ---
 
 <div class="hero">
-  <h1>Pricing Packages</h1>
+  <h1 class="brand-title">11<span class="brand-accent">Entertainment</span> - Packages</h1>
   <p class="tagline">Transparent, Value-Driven Packages for Every Event</p>
 </div>
 

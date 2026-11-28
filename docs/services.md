@@ -2,7 +2,7 @@
 ---
 
 <div class="hero">
-  <h1>Our Services</h1>
+  <h1 class="brand-title">11<span class="brand-accent">Entertainment</span> - Services</h1>
   <p class="tagline">Professional DJ & Entertainment Services for Every Occasion</p>
 </div>
 
